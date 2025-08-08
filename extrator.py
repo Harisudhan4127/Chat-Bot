@@ -2,7 +2,7 @@ import os
 import json
 
 # ✅ Update this to your correct path (use double backslashes or raw string)
-intents_dir = r"C:\Users\haris\Downloads\Chrome Downloads\charBot\intents"
+intents_dir = r"C:\Users\haris\Downloads\Chrome Downloads\chat-Bot\intents"
 output_file = "dialogflow_intents_kv.json"
 
 intent_kv = {}

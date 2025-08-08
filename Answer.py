@@ -2,7 +2,7 @@ import os
 import json
 
 # ✅ Your Dialogflow 'intents' folder path
-intents_dir = r"C:\Users\haris\Downloads\Chrome Downloads\charBot\intents"
+intents_dir = r"C:\Users\haris\Downloads\Chrome Downloads\chat-Bot\intents"
 output_file = "answers_only.json"
 
 answers = {}

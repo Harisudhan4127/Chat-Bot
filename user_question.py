@@ -2,7 +2,7 @@ import os
 import json
 
 # ✅ Replace with your actual intents folder path
-intents_dir = r"C:\Users\haris\Downloads\Chrome Downloads\charBot\intents"
+intents_dir = r"C:\Users\haris\Downloads\Chrome Downloads\chat-Bot\intents"
 output_file = "usersays_questions.json"
 
 result = {}
