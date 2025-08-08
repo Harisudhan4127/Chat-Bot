@@ -1,0 +1,80 @@
+[
+  {
+    "id": "5949b5d5-dcb8-4c82-bb82-6dc0e65aa4fe",
+    "data": [
+      {
+        "text": "clg mission",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "f10942c0-580b-4677-9d15-389618f439c3",
+    "data": [
+      {
+        "text": "clg vision",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "404cfe5e-b598-4d7e-8910-ea1050695440",
+    "data": [
+      {
+        "text": "vision and mission",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e5b799a2-1fc1-4d1c-a714-43e4894187d8",
+    "data": [
+      {
+        "text": "clg vision and mission",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "0e4a1036-ac05-4d47-b249-30941854cee5",
+    "data": [
+      {
+        "text": "vision and mission of the manakula vinayagar institute of technology collage",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "bd7e6e33-06ad-4b0d-89d7-648325064789",
+    "data": [
+      {
+        "text": "vision and mission of the mvit collage",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "b71cf55e-8e1b-4d98-8e2d-9aa86d810a77",
+    "data": [
+      {
+        "text": "aiml mentors",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "411fcb4e-227f-425f-9e2b-83e8e045546f",
+    "data": [
+      {
+        "text": "aiml professors",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ffcb3bad-77a3-4061-a5aa-b15646879e1a",
+    "data": [
+      {
+        "text": "aiml teachers",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a32d0a35-1fb4-492c-a8c9-1e702617eafc",
+    "data": [
+      {
+        "text": "aiml staff",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "96292bbb-d04d-43ef-b2d7-5a6f4b3172bb",
+    "data": [
+      {
+        "text": "aiml faculty",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

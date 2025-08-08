@@ -1,0 +1,405 @@
+{
+  "Admission in collage.": [
+    "admission in mvit clg",
+    "admission in mit clg",
+    "I want to put admission in mvit clg",
+    "I want to put admission in mit clg",
+    "I want to put admission for AIML course in your collage.",
+    "I want to put admission for IOT course in your collage.",
+    "I want to put admission for FT course in your collage.",
+    "I want to put admission for RA course in your collage.",
+    "I want to put admission for MECH course in your collage.",
+    "I want to put admission for IT course in your collage.",
+    "I want to put admission for CSE course in your collage.",
+    "I want to put admission for ECE course in your collage.",
+    "I want to put admission for EEE course in your collage.",
+    "admission for EEE."
+  ],
+  "AIML_STAFF": [
+    "aiml mentors",
+    "aiml professors",
+    "aiml teachers",
+    "aiml staff",
+    "aiml faculty"
+  ],
+  "Bot name.": [
+    "your name.",
+    "what is your name.",
+    "tell me your name."
+  ],
+  "bus_clg": [
+    "mvit fan",
+    "buses in mvit clg",
+    "buses in mvit",
+    "mvit bus routes",
+    "mvit bus stops",
+    "manakula vinayagar institute of technology buses",
+    "mvit bus details",
+    "clg bus details",
+    "clg bus"
+  ],
+  "canteen": [
+    "canteen food",
+    "foods available in manakula vinayagar institute of technology",
+    "food in collage canteen",
+    "what are the food available in canteen",
+    "ground floor canteen menu",
+    "canteen menu"
+  ],
+  "clg_estabilsed": [
+    "clg started details",
+    "clg opening details",
+    "when did the collage established"
+  ],
+  "clg_information": [
+    "mvit web page",
+    "clg website",
+    "clg web link",
+    "mvit website",
+    "mvit clg",
+    "mit collage",
+    "your clg website",
+    "your clg web",
+    "your collage website",
+    "I want details about your collage",
+    "I want details about my collage",
+    "give some information about my collage",
+    "give some information about your collage"
+  ],
+  "clg_location": [
+    "give me the information were the clg is located",
+    "mvit location",
+    "mvit in map",
+    "clg location in map",
+    "clg location in google map",
+    "clg map",
+    "where did the collage located",
+    "collage location link",
+    "collage location"
+  ],
+  "computer_lab": [
+    "cse lab",
+    "manakula vinayagar institute of technology computer lab",
+    "cs lab in mvit clg",
+    "computer lab in mvit",
+    "photo of computer lab",
+    "images of cse lab"
+  ],
+  "courses in our clg": [
+    "course in our clg",
+    "what are the engineering courses offered in your collage.",
+    "courses in mvit collage.",
+    "courses in your clg.",
+    "courses in your collage.",
+    "what  are courses in your clg.",
+    "what  are courses in your collage."
+  ],
+  "Default Welcome Intent": [
+    "just going to say hi",
+    "heya",
+    "hello hi",
+    "hai",
+    "hey there",
+    "hi there",
+    "greetings",
+    "hey",
+    "long time no see",
+    "hello",
+    "lovely day isn't it",
+    "I greet you",
+    "hello again",
+    "hi",
+    "hello there",
+    "a good day"
+  ],
+  "digital_library": [
+    "internet library",
+    "online library",
+    "other library",
+    "digital library in manakula vinayagar institute of technology , pondicheery",
+    "digital library in mvit pondicheery",
+    "digital library"
+  ],
+  "eee_staff": [
+    "aiml mentors",
+    "EEE teachers",
+    "eee professers",
+    "eee staff",
+    "eee faculty"
+  ],
+  "fees for AIML": [
+    "artificial intelligence and machine learning fees",
+    "aiml fees",
+    "fees for AIML.",
+    "tell me the fees structure for AIML."
+  ],
+  "fees for CSC.": [
+    "computer science and engineering fees",
+    "computer science fees",
+    "cse fees",
+    "fees for CSE.",
+    "tell me the fees structure for CSE."
+  ],
+  "fees for ECE": [
+    "electronics and communication engineering fees",
+    "ece fees",
+    "fess for ECE",
+    "tell me the fees structure for ECE."
+  ],
+  "fees for FT": [
+    "food technology fees",
+    "ft fees",
+    "fees for FT.",
+    "tell me the fees structure for FT."
+  ],
+  "fees for IOT": [
+    "information of things fees",
+    "iot fees",
+    "fees for IOT.",
+    "tell me the fees structure for IOT."
+  ],
+  "fees for IT": [
+    "information technology fees",
+    "it fees",
+    "fees for IT.",
+    "tell me the fees structure for IT."
+  ],
+  "fees for MECH": [
+    "mechanical engineering fees",
+    "mech fees",
+    "fees for MECH.",
+    "tell me the fees structure for \n MECH."
+  ],
+  "fees for RA": [
+    "robotics and automation fees",
+    "robotics fees",
+    "fees for robotics",
+    "fees for RA",
+    "tell me the fees structure for \n RA."
+  ],
+  "fess for EEE": [
+    "electrical and electronic engineering fees",
+    "eee fees",
+    "fees for EEE.",
+    "fees structure for EEE.",
+    "tell me the fees structure for EEE."
+  ],
+  "FT_STAFF": [
+    "ft professors",
+    "ft techers",
+    "ft mentors",
+    "ft faculty",
+    "ft staff"
+  ],
+  "good afternoon": [
+    "happy afternoon.",
+    "good afternoon.",
+    "hi, good afternoon."
+  ],
+  "good night": [
+    "have a good night.",
+    "good night",
+    "hi, good night."
+  ],
+  "happy morning.": [
+    "happy morning.",
+    "good morning.",
+    "hi good morning."
+  ],
+  "image_of_clg": [
+    "manakula vinayagar institute of technology images",
+    "mvit photos",
+    "mvit images"
+  ],
+  "iot_staff": [
+    "information of things faculty",
+    "iot teachers",
+    "iot mentors",
+    "iot facultys",
+    "iot professors",
+    "iot staffs"
+  ],
+  "Library": [
+    "library in manakula vinayagar institute of technology",
+    "mvit library images",
+    "library images",
+    "library in our clg",
+    "library"
+  ],
+  "mech_staff": [
+    "mech staff",
+    "mech teacher",
+    "mech faculty",
+    "mech professors",
+    "mechanical engineering faculty"
+  ],
+  "placement": [
+    "placements in mvit",
+    "placement in our clg",
+    "student selected in company",
+    "student got placement",
+    "students placement record",
+    "students placement",
+    "placement",
+    "placement records",
+    "placement details"
+  ],
+  "queries_form": [
+    "queries submission link",
+    "queries link",
+    "queries submission",
+    "I have some queries",
+    "queries form",
+    "queries section",
+    "where did i submit my queries"
+  ],
+  "robotics_staff": [
+    "ra staff",
+    "robotics staff",
+    "robotics and automation mentor",
+    "robotics and automation teachers",
+    "robotics and automation professors",
+    "robotics and automation faculty",
+    "robotics and automation staff"
+  ],
+  "room_num": [
+    "class rooms allotment in manakula vinayagar institute of technology",
+    "number of classes",
+    "classes",
+    "class room details",
+    "room numbers",
+    "class room allotment",
+    "class rooms in mvit clg"
+  ],
+  "seats_for_cse": [
+    "seat for computer science engineering",
+    "seat for cse",
+    "seat for cse in mit",
+    "no of seats in cse",
+    "how many seats are there for cse",
+    "how many seat alloted for cse",
+    "cse seats"
+  ],
+  "seats_for_ece": [
+    "seats for electronics communication engineering",
+    "seat for ece",
+    "seat for ece in mit",
+    "no of seats in ece",
+    "how many seats are there for ece",
+    "how many seat alloted for ece",
+    "ece seats"
+  ],
+  "seats_for_FT": [
+    "seat for food technology",
+    "seat for ft",
+    "seat for ft in mit",
+    "no of seats in ft",
+    "how many seats are there for ft",
+    "how many seat alloted for ft"
+  ],
+  "seats_for_Iot": [
+    "seats in information of things",
+    "seat for iot",
+    "seat for iot in mit",
+    "no of seats in iot",
+    "how many seats are there for iot",
+    "how many seat alloted for iot"
+  ],
+  "seats_for_MECH": [
+    "seat in mechanical engineering",
+    "seats in mechanical",
+    "seat for mech",
+    "seat for mech in mit",
+    "no of seats in mech",
+    "how many seats are there for mech",
+    "how many seat alloted for mech",
+    "mech seats"
+  ],
+  "seats_for_robotics": [
+    "seat for robotics",
+    "seat for RA in mit",
+    "no of seats in robotics",
+    "how many seats are there for RA",
+    "how many seat alloted for RA"
+  ],
+  "seat_for_aiml": [
+    "seats for artificial engineering and machine learning",
+    "aiml seats",
+    "how many seat alloted for aiml",
+    "how many seats are there for aiml",
+    "no of seats in aiml",
+    "seat for aiml in mit",
+    "seat for aiml"
+  ],
+  "seat_for_eee": [
+    "electrical and electronics engineering",
+    "eee seat in 2024",
+    "seat for eee",
+    "seat for eee in mit",
+    "no of seats in eee",
+    "how many seats are there for eee",
+    "how many seat alloted for eee",
+    "eee seats"
+  ],
+  "seat_for_IT": [
+    "seats for information technology",
+    "seat for it",
+    "seat for it in mit",
+    "no of seats in it",
+    "how many seats are there for it",
+    "how many seat alloted for it",
+    "it seats"
+  ],
+  "sports": [
+    "sports activity",
+    "sports award",
+    "extra cricular activity eca",
+    "sports in mvit",
+    "sports",
+    "sports in your clg",
+    "what are the sports in our clg"
+  ],
+  "syllabus_aiml_sem1": [
+    "aiml syllabus for semester1",
+    "sem1 aiml syllabus",
+    "sem1 syllabus for aiml",
+    "aiml sem1 syllabus",
+    "phy syllabus for aiml",
+    "m1 syllabus for aiml",
+    "bee syllabus for aiml",
+    "semester 1 syllabus for aiml",
+    "syllabus for aiml sem 1",
+    "syllabus for aiml",
+    "aiml syllabus"
+  ],
+  "syllabus_aiml_sem2": [
+    "aiml syllabus for semester2",
+    "aiml syllabus for 2semester",
+    "aiml syllabus 2sem",
+    "sem2 syllabus for aiml",
+    "aiml sem2 syllabus"
+  ],
+  "syllabus_aiml_sem3": [
+    "sem3 aiml",
+    "aiml sem3",
+    "syllabus for aiml semester3",
+    "aiml semester3 syllabus",
+    "sem3 syllabus aiml",
+    "syllabus for sem3 aiml",
+    "syllabus for aiml sem3"
+  ],
+  "syllabus_cse_sem1": [
+    "cse syllabus",
+    "syllabus for computer science engineering",
+    "semester1 cse syllabus",
+    "cse syllabus for sem1"
+  ],
+  "vision_mission": [
+    "clg mission",
+    "clg vision",
+    "vision and mission",
+    "clg vision and mission",
+    "vision and mission of the manakula vinayagar institute of technology collage",
+    "vision and mission of the mvit collage"
+  ]
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "c6c9b961-baf3-4b8b-8644-af7fc4f30b47",
+    "data": [
+      {
+        "text": "internet library",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "8f350c5e-05b6-486c-aedd-055218b36e6b",
+    "data": [
+      {
+        "text": "online library",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "c553bf53-4206-4094-9894-5ead25652054",
+    "data": [
+      {
+        "text": "other library",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "baf3f462-fbb7-4fdc-9368-b0061eccba7a",
+    "data": [
+      {
+        "text": "digital library in manakula vinayagar institute of technology , pondicheery",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "be16ab2a-6e77-4fc4-8717-d41967b7e4c4",
+    "data": [
+      {
+        "text": "digital library in mvit pondicheery",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "3a72f60a-e0ec-4ba5-bbe7-7dba48f458a1",
+    "data": [
+      {
+        "text": "digital library",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

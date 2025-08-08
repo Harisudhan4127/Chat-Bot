@@ -1,0 +1,35 @@
+{
+  "id": "5de5ee9e-9edb-4943-9eb5-3b894c0af152",
+  "name": "iot_staff",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "1.Dr.N. PALANIVEL ( Link is not available )     \n                                                                                                                                                    2.Mrs.V.SUGANYA ( Link is not available )                                                                                                                                            \n                                                                                                                                                      3.Mr.V.KUMARAGURU https://in.docworkspace.com/d/sIPC4hYOQArX1urcG?sa\u003dcl         \n                                                                                                                                                    4.Mrs.K.C NITHYASREE https://in.docworkspace.com/d/sIFe4hYOQAv71urcG?sa\u003dcl                    \n                                                                                                                                                    5.Mr.G.KEERTHIRAAJ ( Link is not available )                                                                                                           \n                                                                                                                                                    6.Ms.S.ADOLPHINE SHYNI https://in.docworkspace.com/d/sICu4hYOQAov2urcG?sa\u003dcl                                                                                                                                           \n                                                                                                                                                    7.Mrs.K.KAVITHA https://in.docworkspace.com/d/sIAG4hYOQApj2urcG?sa\u003dcl         \n                                                                                                                                                    \n 8.Ms.A.SHEERIN https://in.docworkspace.com/d/sIKC4hYOQAqT2urcG?sa\u003dcl            \n                                                                                                                                                    9.Mr.U.MURUGANANTHAM ( Link is not available )                                                                                    \n                                                                                                                                                    They are the faculty of IOT in 2024-25. You can also check the faculty details by clicking the link next to their name."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

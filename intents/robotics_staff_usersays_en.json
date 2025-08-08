@@ -1,0 +1,93 @@
+[
+  {
+    "id": "1aa245b4-48c2-4bb4-b107-ef1948490647",
+    "data": [
+      {
+        "text": "ra staff",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "32877924-0a9e-4aa8-81c0-ba3426d8f47c",
+    "data": [
+      {
+        "text": "robotics staff",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "7542a585-1506-4e73-b427-57a0df5cad24",
+    "data": [
+      {
+        "text": "robotics and automation mentor",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "13c118cc-5ecb-4740-9df7-a6eae79c9a79",
+    "data": [
+      {
+        "text": "robotics and automation teachers",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "1cdec380-d08a-4f57-9461-6b83ba81aceb",
+    "data": [
+      {
+        "text": "robotics and automation professors",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "7883a567-f09e-4571-a6cf-b76e7be108da",
+    "data": [
+      {
+        "text": "robotics and automation faculty",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "42f2ab20-3505-49cb-80ed-34bc38b3cc1a",
+    "data": [
+      {
+        "text": "robotics and automation staff",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

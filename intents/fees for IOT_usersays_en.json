@@ -1,0 +1,54 @@
+[
+  {
+    "id": "4b7f4f65-f068-43f0-b13c-c29cdf61f272",
+    "data": [
+      {
+        "text": "information of things fees",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "2463d8e1-7e2c-440b-a01b-0f5f0a464686",
+    "data": [
+      {
+        "text": "iot fees",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "6a9cc73d-c358-457a-b31f-dd0f9af158da",
+    "data": [
+      {
+        "text": "fees for IOT.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "72d95f82-c833-4ba8-9767-959edd860d92",
+    "data": [
+      {
+        "text": "tell me the fees structure for IOT.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

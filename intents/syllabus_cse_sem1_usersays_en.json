@@ -1,0 +1,70 @@
+[
+  {
+    "id": "63292913-977b-4d1d-ae17-ee9cd9433a96",
+    "data": [
+      {
+        "text": "cse syllabus",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "b9937340-bfa8-4e8c-b349-92668aef65b6",
+    "data": [
+      {
+        "text": "syllabus for computer science engineering",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "24365a6d-6d5f-4893-a796-ee873330a055",
+    "data": [
+      {
+        "text": "semester",
+        "userDefined": false
+      },
+      {
+        "text": "1",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      },
+      {
+        "text": " cse syllabus",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "78ed0511-1e53-44a7-9c0a-b5ad3e92dc2f",
+    "data": [
+      {
+        "text": "cse syllabus for sem",
+        "userDefined": false
+      },
+      {
+        "text": "1",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

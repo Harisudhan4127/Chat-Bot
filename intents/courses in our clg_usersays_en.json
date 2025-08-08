@@ -1,0 +1,93 @@
+[
+  {
+    "id": "9cb4442d-a8f8-4795-9256-13f229b11db7",
+    "data": [
+      {
+        "text": "course in our clg",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "4b4f576a-288e-43f1-b519-c003b028c190",
+    "data": [
+      {
+        "text": "what are the engineering courses offered in your collage.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "d74848d1-97bf-4325-968b-cb1323c5c88b",
+    "data": [
+      {
+        "text": "courses in mvit collage.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a0629f29-d8d5-48eb-81ea-336ad6ee408c",
+    "data": [
+      {
+        "text": "courses in your clg.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "cd23db73-b85c-4873-84d9-70f3597fed80",
+    "data": [
+      {
+        "text": "courses in your collage.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "84b389ba-5fa9-4c34-85a4-dae4d540c384",
+    "data": [
+      {
+        "text": "what  are courses in your clg.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "2f4c6816-db7f-4ce7-b298-1f70f6a0cf46",
+    "data": [
+      {
+        "text": "what  are courses in your collage.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

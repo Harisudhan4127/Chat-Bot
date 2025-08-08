@@ -1,0 +1,113 @@
+[
+  {
+    "id": "f4e611e4-76ca-4035-886f-eb3798f461b7",
+    "data": [
+      {
+        "text": "sem3 aiml",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "17c43325-e4d7-420b-ac11-ffb10f795884",
+    "data": [
+      {
+        "text": "aiml sem3",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a68e453b-da23-42de-9305-24c3db979d20",
+    "data": [
+      {
+        "text": "syllabus for aiml semester3",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "212a4c6b-205d-493a-8b0d-c6c2b3f11cbd",
+    "data": [
+      {
+        "text": "aiml semester",
+        "userDefined": false
+      },
+      {
+        "text": "3",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      },
+      {
+        "text": " syllabus",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "4aa8a883-bbe3-4b5e-b14a-9ae6e35fb0dc",
+    "data": [
+      {
+        "text": "sem",
+        "userDefined": false
+      },
+      {
+        "text": "3",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      },
+      {
+        "text": " syllabus aiml",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "fc0a7529-b04d-41ef-99b6-27944703b8c2",
+    "data": [
+      {
+        "text": "syllabus for sem3 aiml",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "245de4c2-a119-4d4b-b9c8-9ee48a044ccd",
+    "data": [
+      {
+        "text": "syllabus for aiml sem3",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

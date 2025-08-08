@@ -1,0 +1,35 @@
+{
+  "id": "ae669d93-d6e6-461f-803f-d4384649b7e5",
+  "name": "clg_location",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Manakula vinayagar institute of technology was located in Madagadipet. ( you can also use the given link to find the exact location of our collage) https://maps.app.goo.gl/Z15uPr65jNhRfe117"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

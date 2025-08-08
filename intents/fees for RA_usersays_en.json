@@ -1,0 +1,67 @@
+[
+  {
+    "id": "7f51b234-51b5-437b-bf5b-6f647ce4d05a",
+    "data": [
+      {
+        "text": "robotics and automation fees",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a3403b4c-137e-4015-b5d0-987aae23271a",
+    "data": [
+      {
+        "text": "robotics fees",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "bb3a4c58-1249-40f0-a87b-022db0f18857",
+    "data": [
+      {
+        "text": "fees for robotics",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "876ea1d2-22a7-41f3-8fa5-6f36f1e03636",
+    "data": [
+      {
+        "text": "fees for RA",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "faa4a7da-cb1b-462f-940d-9db1edcd36a8",
+    "data": [
+      {
+        "text": "tell me the fees structure for \n RA.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "65aafc8f-7b2f-4de6-8873-ce664aa7a39d",
+    "data": [
+      {
+        "text": "canteen food",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "306e3efe-d337-4da3-80a7-e37516239ba2",
+    "data": [
+      {
+        "text": "foods available in manakula vinayagar institute of technology",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ab7a8da3-0fe2-41c2-b528-068480b7ee29",
+    "data": [
+      {
+        "text": "food in collage canteen",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "916ac876-e36e-4793-93a8-621bafbec6f0",
+    "data": [
+      {
+        "text": "what are the food available in canteen",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "3050b8fc-657b-4d13-bcd2-8dd5a2e0d8a9",
+    "data": [
+      {
+        "text": "ground floor canteen menu",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "33b61a5c-fe1c-41a7-bc78-be6c9990a5fa",
+    "data": [
+      {
+        "text": "canteen menu",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

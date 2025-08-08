@@ -1,0 +1,67 @@
+[
+  {
+    "id": "5b3763a3-e83a-4e32-8825-1c264ef0ae23",
+    "data": [
+      {
+        "text": "computer science and engineering fees",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ff258924-8d14-4839-8390-cda5f4634bf2",
+    "data": [
+      {
+        "text": "computer science fees",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "4b54a757-7bd8-4d9d-a90f-0a71bf3956f1",
+    "data": [
+      {
+        "text": "cse fees",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a51a4ecd-7dfa-4633-94f8-2d0843aa223d",
+    "data": [
+      {
+        "text": "fees for CSE.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "26e82919-a1e7-4b52-8688-c500232752a2",
+    "data": [
+      {
+        "text": "tell me the fees structure for CSE.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

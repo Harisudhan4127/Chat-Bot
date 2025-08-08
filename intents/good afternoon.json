@@ -1,0 +1,39 @@
+{
+  "id": "cd14ee06-1232-435c-a137-0029a8344c0a",
+  "name": "good afternoon",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "hello, good afternoon.",
+            "good afternoon, how can I help you.",
+            "happy afternoon, have a nice day.",
+            "happy afternoon, what help did you need from me.",
+            "hi,  good afternoon."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

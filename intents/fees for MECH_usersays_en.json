@@ -1,0 +1,54 @@
+[
+  {
+    "id": "d87a2677-6a84-49ac-a25f-aaaf6e03284f",
+    "data": [
+      {
+        "text": "mechanical engineering fees",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "601c4511-ee89-44ad-a099-5bc9f67a3493",
+    "data": [
+      {
+        "text": "mech fees",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "2a529597-89c9-4a25-820b-6bfe4196b629",
+    "data": [
+      {
+        "text": "fees for MECH.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "5896c931-0eec-409d-9f38-6ddb64ebb1e4",
+    "data": [
+      {
+        "text": "tell me the fees structure for \n MECH.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

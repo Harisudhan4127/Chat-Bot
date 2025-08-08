@@ -1,0 +1,35 @@
+{
+  "id": "dd86c320-f698-4158-a5fa-2de31627713d",
+  "name": "clg_estabilsed",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "manakula vinayager institute of technology was started at 2008 in madagadipet. and it was approved by AICTE. and also this institute was accredited by NAAC with \u0027A; grade and NBA."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

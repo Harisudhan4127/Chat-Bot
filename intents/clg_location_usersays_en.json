@@ -1,0 +1,119 @@
+[
+  {
+    "id": "fd253918-e954-4a84-8400-1be82380da0b",
+    "data": [
+      {
+        "text": "give me the information were the clg is located",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "d8baa02d-f6b1-46db-af38-740b212cd624",
+    "data": [
+      {
+        "text": "mvit location",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e5fde55f-67e3-4818-9086-629277f9dcf5",
+    "data": [
+      {
+        "text": "mvit in map",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "b625a1c4-f647-4515-b536-b4d51bac78e7",
+    "data": [
+      {
+        "text": "clg location in map",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "13459c59-ebec-4e86-a5f6-4ffe73211eb8",
+    "data": [
+      {
+        "text": "clg location in google map",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "1ad9357d-ad49-4358-9b5e-30dbc1dcd9c6",
+    "data": [
+      {
+        "text": "clg map",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e2f351d7-e219-47ca-b323-2aa32e53a073",
+    "data": [
+      {
+        "text": "where did the collage located",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "b475cca7-cd83-4697-baed-b4f456daaaf3",
+    "data": [
+      {
+        "text": "collage location link",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "f2c39b23-3db1-4686-83e3-86f0cb8c0aca",
+    "data": [
+      {
+        "text": "collage location",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

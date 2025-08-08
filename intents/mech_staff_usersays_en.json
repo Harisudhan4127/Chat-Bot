@@ -1,0 +1,67 @@
+[
+  {
+    "id": "0e3377a3-0293-4397-bf1c-b6e738433835",
+    "data": [
+      {
+        "text": "mech staff",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "f530fe13-9cc4-4db6-869c-2fa852e3e3e3",
+    "data": [
+      {
+        "text": "mech teacher",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "adad8abd-3965-4bf5-a60d-14a22e9e774d",
+    "data": [
+      {
+        "text": "mech faculty",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "0cb74336-dfb6-45e5-a336-56cb763ec45c",
+    "data": [
+      {
+        "text": "mech professors",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e7cd6070-b35c-4223-bcde-99354e0ed5e7",
+    "data": [
+      {
+        "text": "mechanical engineering faculty",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

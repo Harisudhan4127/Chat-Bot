@@ -1,0 +1,54 @@
+[
+  {
+    "id": "69550e77-c5b0-4298-a3ad-af66c534e6f7",
+    "data": [
+      {
+        "text": "food technology fees",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "f4afb746-77c3-4cfa-b542-87c8c336b122",
+    "data": [
+      {
+        "text": "ft fees",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "dc4a9bc7-76fd-45b4-ab9e-2befd9b97470",
+    "data": [
+      {
+        "text": "fees for FT.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "b7156067-3b51-497f-892c-24890889564d",
+    "data": [
+      {
+        "text": "tell me the fees structure for FT.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

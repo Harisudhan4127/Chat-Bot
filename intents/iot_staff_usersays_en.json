@@ -1,0 +1,80 @@
+[
+  {
+    "id": "f4db93c0-ed14-460c-a5f5-171501adbd7e",
+    "data": [
+      {
+        "text": "information of things faculty",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "0e7590a2-01d0-48a6-b9a0-b0c9bbf81548",
+    "data": [
+      {
+        "text": "iot teachers",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "b7a4d583-80c1-4c4e-bf65-3980cc48537c",
+    "data": [
+      {
+        "text": "iot mentors",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "fb445c05-46a0-444b-a3b8-c7d889939696",
+    "data": [
+      {
+        "text": "iot facultys",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "3697052a-740f-4bf9-b13a-7ad6b4ec7c32",
+    "data": [
+      {
+        "text": "iot professors",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "130cd303-a095-4fe1-8d1d-10005d998c89",
+    "data": [
+      {
+        "text": "iot staffs",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

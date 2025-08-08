@@ -1,0 +1,67 @@
+[
+  {
+    "id": "990870e0-ae17-42c2-b7e1-8f501c2f6f53",
+    "data": [
+      {
+        "text": "aiml mentors",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "0a176747-a0f1-4508-8087-781dd07581b1",
+    "data": [
+      {
+        "text": "EEE teachers",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "cf93f3c0-6a42-4922-8082-a6d9b9a46430",
+    "data": [
+      {
+        "text": "eee professers",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "7d271520-cb64-445a-8bdd-67bfd481880c",
+    "data": [
+      {
+        "text": "eee staff",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "8a43d764-cbee-411e-8093-3299f686b68e",
+    "data": [
+      {
+        "text": "eee faculty",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

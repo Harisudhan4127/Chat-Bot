@@ -1,0 +1,35 @@
+{
+  "id": "a17857c8-8452-4568-8b2e-fb3f3dc1141b",
+  "name": "mech_staff",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "1.Dr.B.RADJARAM https://in.docworkspace.com/d/sIMm4hYOQAr6Eu7cG?sa\u003dcl                                                \n                                                                                                                                                    2.Mr.K.KARTHIGAYAN https://in.docworkspace.com/d/sINO4hYOQAtSEu7cG?sa\u003dcl                                                                                                                                           \n                                                                                                                                                    3.Mr.K.SELVAM https://in.docworkspace.com/d/sIKS4hYOQAuaEu7cG?sa\u003dcl                                       \n                                                                                                                                                    4.Mr.B.VASANTH https://in.docworkspace.com/d/sIHC4hYOQAviEu7cG?sa\u003dcl                                                        \n                                                                                                                                                    5.Mr.S.GANESHKUMAR https://in.docworkspace.com/d/sIHC4hYOQAo6Fu7cG?sa\u003dcl                                                                                                                                                               \n                                                                                                                                                    6.Mr.A.THIAGARAJAN https://in.docworkspace.com/d/sIEq4hYOQApyFu7cG?sa\u003dcl                      \n                                                                                                                                                    7.Mr.KARTHIKEYAN https://in.docworkspace.com/d/sIDy4hYOQArOFu7cG?sa\u003dcl                         \n                                                                                                                                                    8.Mr.J.SUGUMARAN https://in.docworkspace.com/d/sICW4hYOQAseFu7cG?sa\u003dcl                          \n                                                                                                                                                    9.Mr.R.RANJIT KUMAR https://in.docworkspace.com/d/sIM-4hYOQAtiFu7cG?sa\u003dcl          \n                                                                                                                                                  10.Ms.S.SUGUNYA https://in.docworkspace.com/d/sIHK4hYOQAu-Fu7cG?sa\u003dcl                   \n11.Mr.R.ILANDJEZIANR https://in.docworkspace.com/d/sIOy4hYOQAoKGu7cG?sa\u003dcl                                                                                                                                  12.Dr.A.MATHIARASU https://in.docworkspace.com/d/sIGS4hYOQApmGu7cG?sa\u003dcl                                                                                                                                    13.Dr.P.NATARAJAN https://in.docworkspace.com/d/sID-4hYOQAraGu7cG?sa\u003dcl              \n14.Mr.S.KRISHNA KUMAR https://in.docworkspace.com/d/sIHq4hYOQAtSGu7cG?sa\u003dcl                                                                                                                                        15.Mrs.G.DEEBA https://in.docworkspace.com/d/sIAu4hYOQAvGGu7cG?sa\u003dcl                       16.Mrs.S.SHEENA https://in.docworkspace.com/d/sIK24hYOQApaHu7cG?sa\u003dcl              \nThey are the faculty of MECH in 2024-25. You can also check the faculty details by clicking the link next to their name."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

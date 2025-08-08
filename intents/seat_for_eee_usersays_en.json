@@ -1,0 +1,112 @@
+[
+  {
+    "id": "4a05e5a7-3249-4d04-96ab-cda1944ce42b",
+    "data": [
+      {
+        "text": "electrical and electronics engineering",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "1ad10063-c930-4d04-8233-72259ad57279",
+    "data": [
+      {
+        "text": "eee seat in ",
+        "userDefined": false
+      },
+      {
+        "text": "2024",
+        "meta": "@sys.date-period",
+        "alias": "date-period",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "c4b1de64-c499-47a5-a6e9-0a6c757be5ca",
+    "data": [
+      {
+        "text": "seat for eee",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "358b585d-a378-40d7-a25f-abf5590c53b7",
+    "data": [
+      {
+        "text": "seat for eee in mit",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "cf5f33d1-9b09-408e-9307-4d551c4cae82",
+    "data": [
+      {
+        "text": "no of seats in eee",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "2322e89e-ec27-4593-9dd6-fffa82ea7a19",
+    "data": [
+      {
+        "text": "how many seats are there for eee",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "b4d436e5-0e3c-47fc-9c27-e55af3c3d990",
+    "data": [
+      {
+        "text": "how many seat alloted for eee",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e131429a-8c09-4dd8-8c87-6d893f4a8bbb",
+    "data": [
+      {
+        "text": "eee seats",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

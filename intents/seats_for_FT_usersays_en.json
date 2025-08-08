@@ -1,0 +1,80 @@
+[
+  {
+    "id": "b181f73f-130c-49b8-a839-83775d0d19c0",
+    "data": [
+      {
+        "text": "seat for food technology",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a6a51552-f7da-4121-bc06-09024ee708bf",
+    "data": [
+      {
+        "text": "seat for ft",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "d78236a5-a102-407d-8e1f-fa1a5eab04bf",
+    "data": [
+      {
+        "text": "seat for ft in mit",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "b0877380-2899-49dd-a72b-19f0eb39fb61",
+    "data": [
+      {
+        "text": "no of seats in ft",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "1615f83d-d4e3-4ddc-910b-9f7c0bcf16a1",
+    "data": [
+      {
+        "text": "how many seats are there for ft",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "54056e5d-911f-455a-8e3d-3f7479a54487",
+    "data": [
+      {
+        "text": "how many seat alloted for ft",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "en",
+    "updated": 0
+  }
+]

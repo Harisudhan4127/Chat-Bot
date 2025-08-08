@@ -1,0 +1,80 @@
+[
+  {
+    "id": "7cb20d2e-5087-4cbe-9c58-1eed66f90b30",
+    "data": [
+      {
+        "text": "cse lab",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "675ff173-ae5b-46d9-b138-0c51be1dc026",
+    "data": [
+      {
+        "text": "manakula vinayagar institute of technology computer lab",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "275cd820-60ec-4ed8-b161-26825d9212ca",
+    "data": [
+      {
+        "text": "cs lab in mvit clg",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "08e7564b-852a-46c3-8527-44923420b847",
+    "data": [
+      {
+        "text": "computer lab in mvit",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "9209e559-9e9c-4100-9051-08eb06164140",
+    "data": [
+      {
+        "text": "photo of computer lab",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "c5689c5c-be22-4936-8c65-c62009983a43",
+    "data": [
+      {
+        "text": "images of cse lab",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

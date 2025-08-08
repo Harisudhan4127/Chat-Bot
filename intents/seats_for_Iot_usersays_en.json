@@ -1,0 +1,80 @@
+[
+  {
+    "id": "2ca4c93d-ed99-49f2-9310-4590a9933aef",
+    "data": [
+      {
+        "text": "seats in information of things",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "15d5d27f-5f82-495f-898c-864c6a8cae08",
+    "data": [
+      {
+        "text": "seat for iot",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "0bd99789-9afa-4ab5-9426-d718bf37a8e1",
+    "data": [
+      {
+        "text": "seat for iot in mit",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "48c92dfe-0996-4260-af4f-0fc00abcc1f7",
+    "data": [
+      {
+        "text": "no of seats in iot",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "832f9112-bdaf-4c37-ac62-d0e8a5f9e60b",
+    "data": [
+      {
+        "text": "how many seats are there for iot",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ef399155-a6ff-4f2a-8c62-79e3761b3ce6",
+    "data": [
+      {
+        "text": "how many seat alloted for iot",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "en",
+    "updated": 0
+  }
+]

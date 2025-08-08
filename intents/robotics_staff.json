@@ -1,0 +1,35 @@
+{
+  "id": "8e2b9801-03dc-4907-a122-a65194341add",
+  "name": "robotics_staff",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "1.Dr.V.GOVINDHAN https://in.docworkspace.com/d/sIDe4hYOQAs2JsbcG?sa\u003dcl     \n                                                                                                                                                    2.Mr.A.BASKARAN https://in.docworkspace.com/d/sID-4hYOQApiKsbcG?sa\u003dcl          \n                                                                                                                                                    3.Mrs.KIRUBA SANDOU https://in.docworkspace.com/d/sING4hYOQAquKsbcG?sa\u003dcl                                                                                                                                                               \n                                                                                                                                                    4.Ms.D.JASMINE SUSILA https://in.docworkspace.com/d/sIDq4hYOQAuqKsbcG?sa\u003dcl                                                                                                                                                \n                                                                                                                                                    5.Mrs.J.V. PESHA https://in.docworkspace.com/d/sIJu4hYOQAvmKsbcG?sa\u003dcl                        \n                                                                                                                                                    6.Mrs.D.DHARANI https://in.docworkspace.com/d/sIPm4hYOQAoOLsbcG?sa\u003dcl         \n                                                                                                                                                    7.Mrs.T.SUDHA ( link is not  available )                                                                                 \n                                                                                                                                                     They are the faculty of robotics and automation in 2024-25. You can also check the faculty details by clicking the link next to their name."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,87 @@
+[
+  {
+    "id": "168a863f-eef4-42ce-936b-e32187805b8f",
+    "data": [
+      {
+        "text": "aiml syllabus for semester2",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e52e1237-6bd0-4bcf-8ffc-791adc75a239",
+    "data": [
+      {
+        "text": "aiml syllabus for 2semester",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "7afed06a-00b0-4fbf-8668-873c08a2aebd",
+    "data": [
+      {
+        "text": "aiml syllabus ",
+        "userDefined": false
+      },
+      {
+        "text": "2",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      },
+      {
+        "text": "sem",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ccfc784d-d26d-4d55-aeda-3c72ae0b5682",
+    "data": [
+      {
+        "text": "sem2 syllabus for aiml",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a96ed837-1878-49c0-b662-a8207b3327cd",
+    "data": [
+      {
+        "text": "aiml sem",
+        "userDefined": false
+      },
+      {
+        "text": "2",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      },
+      {
+        "text": " syllabus",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

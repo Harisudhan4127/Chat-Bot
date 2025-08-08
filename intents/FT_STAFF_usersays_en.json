@@ -1,0 +1,67 @@
+[
+  {
+    "id": "5694e7db-753e-4cb0-9bd5-03f0b6ea92bd",
+    "data": [
+      {
+        "text": "ft professors",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "34804753-8176-4c36-854d-37586d03eb1f",
+    "data": [
+      {
+        "text": "ft techers",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "f235c411-30fe-4b59-82a3-c1936b0efea3",
+    "data": [
+      {
+        "text": "ft mentors",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "01d798e3-5428-4a19-9fe5-bdaa10be4f7f",
+    "data": [
+      {
+        "text": "ft faculty",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "445632ed-8f3a-4556-916f-262d6542e286",
+    "data": [
+      {
+        "text": "ft staff",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

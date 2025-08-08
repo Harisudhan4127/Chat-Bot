@@ -1,0 +1,201 @@
+[
+  {
+    "id": "04cdcc96-82b4-4dec-bd71-8a8546534b20",
+    "data": [
+      {
+        "text": "aiml syllabus for semester1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "85a2b293-36d6-4ce0-a86e-77e6569bc7d6",
+    "data": [
+      {
+        "text": "sem",
+        "userDefined": false
+      },
+      {
+        "text": "1",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      },
+      {
+        "text": " aiml syllabus",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "8fd68bc9-4cda-4dfb-9760-92683953555f",
+    "data": [
+      {
+        "text": "sem",
+        "userDefined": false
+      },
+      {
+        "text": "1",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      },
+      {
+        "text": " syllabus for aiml",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "9cb73780-30d1-4517-a24b-3deec7a58422",
+    "data": [
+      {
+        "text": "aiml sem",
+        "userDefined": false
+      },
+      {
+        "text": "1",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      },
+      {
+        "text": " syllabus",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "2fd480cf-049d-448a-bcd6-fcc5718a6e9e",
+    "data": [
+      {
+        "text": "phy syllabus for aiml",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "143891e9-8a9f-4ca6-b959-af1d0cd78345",
+    "data": [
+      {
+        "text": "m",
+        "userDefined": false
+      },
+      {
+        "text": "1",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      },
+      {
+        "text": " syllabus for aiml",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "c4a63461-56d1-456d-8d4e-84a41ff7c39e",
+    "data": [
+      {
+        "text": "bee syllabus for aiml",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a993f8ef-b90a-418e-a48d-011ae386074b",
+    "data": [
+      {
+        "text": "semester ",
+        "userDefined": false
+      },
+      {
+        "text": "1",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      },
+      {
+        "text": " syllabus for aiml",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e0f12b42-8b28-4ffa-b4af-70d1f97ca923",
+    "data": [
+      {
+        "text": "syllabus for aiml sem ",
+        "userDefined": false
+      },
+      {
+        "text": "1",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "4c4e3a3f-3249-4f82-869c-21c48348102d",
+    "data": [
+      {
+        "text": "syllabus for aiml",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "826df501-34e1-4a08-8df5-f154cf410496",
+    "data": [
+      {
+        "text": "aiml syllabus",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

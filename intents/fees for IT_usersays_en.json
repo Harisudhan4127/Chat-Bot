@@ -1,0 +1,54 @@
+[
+  {
+    "id": "4cde08a1-e1c5-46fe-981b-30721b877614",
+    "data": [
+      {
+        "text": "information technology fees",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "06d2e3bc-5231-4bff-9d70-78bf4ff924d0",
+    "data": [
+      {
+        "text": "it fees",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "95fb0851-3469-40b0-8db7-a4b5c5c2eb41",
+    "data": [
+      {
+        "text": "fees for IT.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "3f4c8f95-625d-4e46-87db-1179e21f82fa",
+    "data": [
+      {
+        "text": "tell me the fees structure for IT.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

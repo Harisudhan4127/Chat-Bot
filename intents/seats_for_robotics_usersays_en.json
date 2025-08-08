@@ -1,0 +1,67 @@
+[
+  {
+    "id": "4a173abf-c68a-4aa5-bc05-dd50b89409e8",
+    "data": [
+      {
+        "text": "seat for robotics",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "f5f5e25d-3c90-4202-82cf-26acea4efc97",
+    "data": [
+      {
+        "text": "seat for RA in mit",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "434f3f28-efa6-4351-bdd1-89901f710ef3",
+    "data": [
+      {
+        "text": "no of seats in robotics",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "2e5811af-b023-4563-9d0a-4ecc1e1ee155",
+    "data": [
+      {
+        "text": "how many seats are there for RA",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "7ce38f6f-7209-456d-8c35-56a549ead490",
+    "data": [
+      {
+        "text": "how many seat alloted for RA",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "en",
+    "updated": 0
+  }
+]

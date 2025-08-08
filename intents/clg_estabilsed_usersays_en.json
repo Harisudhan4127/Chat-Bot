@@ -1,0 +1,41 @@
+[
+  {
+    "id": "cb3b0a85-abd8-4902-837d-30c1eb2dd64f",
+    "data": [
+      {
+        "text": "clg started details",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a0f4e89c-96ec-4e01-aa3a-2ab4392828da",
+    "data": [
+      {
+        "text": "clg opening details",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "5707efef-3779-4d54-aa54-fc783917b0d9",
+    "data": [
+      {
+        "text": "when did the collage established",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

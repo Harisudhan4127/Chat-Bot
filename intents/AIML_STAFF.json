@@ -1,0 +1,35 @@
+{
+  "id": "a21b8772-dbc5-42d3-97b4-48f405c45560",
+  "name": "AIML_STAFF",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "1.Mr.R. Raj Bharath https://ibb.co/HtK7Hwy          \n                                                                                                                                                    2.Mrs.K. ANUPRIYA https://www.google.com/url?q\u003dhttp%3A%2F%2Faiml_staff\u0026sa\u003dD      \n                                                                                                                                                    3.Mrs.S.K SUGUNEDHAM https://in.docworkspace.com/d/sIA64hYOQAprqsLcG?sa\u003dcl                                                                                                                                           \n                                                                                                                                                    4.Mrs.S. CHITRA https://in.docworkspace.com/d/sIAm4hYOQArTqsLcG?sa\u003dcl                                           \n                                                                                                                                                    5.Mr.A. JAINULLABEEN https://in.docworkspace.com/d/sIJC4hYOQAsfqsLcG?sa\u003dcl                         \n                                                                                                                                                    \n6.Mrs.S. LAVANYA https://in.docworkspace.com/d/sIKC4hYOQAt7qsLcG?sa\u003dcl       \n                                                                                                                                                    7.Ms.V. NIRIMATHI https://in.docworkspace.com/d/sIPO4hYOQAvDqsLcG?sa\u003dcl                     \n                                                                                                                                                    8.Ms.K. REVATHI https://in.docworkspace.com/d/sIFe4hYOQAoDrsLcG?sa\u003dcl          \n                                                                                                                                                    9.Mrs.S. PRAVEENA https://in.docworkspace.com/d/sIBm4hYOQAqrrsLcG?sa\u003dcl       \n                                                                                                                                                  10.Mrs.P. SUGANYA https://in.docworkspace.com/d/sIFS4hYOQArnrsLcG?sa\u003dcl                                          \n                                                                                                                                                  11.Mr.R. RENGA NAYAGI https://in.docworkspace.com/d/sIIW4hYOQAtXrsLcG?sa\u003dcl                                                                                                                                             \n                                                                                                                                                        They are the faculty of AIML in 2024-25. You can also check the faculty details by clicking the link next to their name."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
