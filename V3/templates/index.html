@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>MVIT Chat Bot</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: white;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      /* Header */
+      .chat-header {
+        background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+        padding: 15px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        border-bottom: 2px solid #00ffcc;
+        border-radius: 0 0 20px 20px;
+        width: 25%;
+        align-self: center;
+        box-sizing: border-box;
+      }
+
+      /* Chat container */
+      .chat-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        overflow-y: auto;
+      }
+
+      /* Messages wrapper */
+      .message-wrapper {
+        display: flex;
+        align-items: flex-start;
+        margin: 8px 0;
+        max-width: 70%;
+      }
+
+      /* Bot avatar */
+      .bot-avatar {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-right: 8px;
+        flex-shrink: 0;
+      }
+
+      /* Message bubbles */
+      .message {
+        padding: 10px;
+        border-radius: 12px;
+        word-wrap: break-word;
+      }
+      .user-message {
+        background-color: #1e88e5;
+        align-self: flex-end;
+      }
+      .bot-message {
+        background-color: #333;
+      }
+
+      /* Input section */
+      .input-container {
+        display: flex;
+        border-top: 2px solid #00ffcc;
+        padding: 10px;
+        background-color: #1a1a1a;
+      }
+      #user-input {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+      }
+      #send-btn {
+        padding: 10px 15px;
+        margin-left: 8px;
+        background-color: #00ffcc;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        color: black;
+        font-weight: bold;
+      }
+      #send-btn:hover {
+        background-color: #00cca3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-header">MVIT Chat Bot</div>
+
+    <div class="chat-container" id="chat-container">
+      <!-- Messages appear here -->
+    </div>
+
+    <div class="input-container">
+      <input type="text" id="user-input" placeholder="Type your message..." />
+      <button id="send-btn">Send</button>
+    </div>
+
+    <script>
+      const sendBtn = document.getElementById("send-btn");
+      const userInput = document.getElementById("user-input");
+      const chatContainer = document.getElementById("chat-container");
+
+      function addMessage(text, isUser) {
+        if (isUser) {
+          // User message
+          const msg = document.createElement("div");
+          msg.classList.add("message", "user-message");
+          msg.textContent = text;
+          chatContainer.appendChild(msg);
+        } else {
+          // Bot message with avatar
+          const wrapper = document.createElement("div");
+          wrapper.classList.add("message-wrapper");
+
+          const avatar = document.createElement("img");
+          avatar.src =
+            "https://cdn-icons-png.flaticon.com/512/4712/4712109.png"; // chatbot face icon
+          avatar.classList.add("bot-avatar");
+
+          const msg = document.createElement("div");
+          msg.classList.add("message", "bot-message");
+          msg.textContent = text;
+
+          wrapper.appendChild(avatar);
+          wrapper.appendChild(msg);
+          chatContainer.appendChild(wrapper);
+        }
+
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+      }
+
+      function sendMessage() {
+        const text = userInput.value.trim();
+        if (!text) return;
+        addMessage(text, true);
+        userInput.value = "";
+
+        fetch("/get", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ msg: text }),
+        })
+          .then((res) => res.json())
+          .then((data) => addMessage(data.reply, false))
+          .catch(() =>
+            addMessage("Sorry, I couldn't connect to the server.", false)
+          );
+      }
+
+      sendBtn.addEventListener("click", sendMessage);
+      userInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") sendMessage();
+      });
+    </script>
+  </body>
+</html>
