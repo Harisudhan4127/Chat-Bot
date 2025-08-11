@@ -1,0 +1,10 @@
+.header {
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    text-align: center;
+    padding: 8px; /* reduced padding to make bar thinner */
+    font-size: 1.5em; /* unchanged font size */
+    font-weight: bold;
+    border-bottom-left-radius: 20px; /* smaller curve for thinner bar */
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+}
