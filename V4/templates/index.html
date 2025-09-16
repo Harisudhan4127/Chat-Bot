@@ -94,7 +94,7 @@
         max-height: 140px;
         border-radius: 10px;
         cursor: pointer;
-        margin-top: 5px;
+        margin: 5px 5px 0 0;
         transition: transform 0.3s;
       }
       .chat-image:hover {
@@ -228,18 +228,26 @@
           msg.classList.add("message", "bot-message");
 
           if (text.startsWith("img:")) {
-            const img = document.createElement("img");
-            img.src = text.replace("img:", "").trim();
-            img.classList.add("chat-image");
+            // Support multiple images (comma separated)
+            const images = text.replace("img:", "").split(",");
+            images.forEach(path => {
+              const img = document.createElement("img");
+              img.src = path.trim();
+              img.classList.add("chat-image");
 
-            img.onclick = function () {
-              modal.style.display = "block";
-              modalImg.src = img.src;
-            };
+              img.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = img.src;
+              };
 
-            msg.appendChild(img);
+              msg.appendChild(img);
+            });
           } else {
-            msg.textContent = text;
+            // Convert links into clickable <a>
+            const urlRegex = /(https?:\/\/[^\s]+)/g;
+            msg.innerHTML = text.replace(urlRegex, url => {
+              return `<a href="${url}" target="_blank" style="color:#00ffcc">${url}</a>`;
+            });
           }
 
           wrapper.appendChild(avatar);
