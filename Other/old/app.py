@@ -1,13 +1,11 @@
-from flask import Flask, request, jsonify, render_template
-import difflib
-from spellchecker import SpellChecker
+from flask import Flask, request, jsonify, render_template_string
+import json
 
 app = Flask(__name__)
 
-# -------------------- Q&A DATA --------------------
-
-qa_data = [
-        {
+qa_data = [ 
+    # ⛔ Paste your full JSON Q&A data here
+    {
         "id": "Admission in collage.",
         "questions": [
             "admission in mvit clg",
@@ -36,7 +34,7 @@ qa_data = [
             "aiml staff",
             "aiml faculty"
         ],
-        "answer": "1.Mr.R. Raj Bharath https://ibb.co/HtK7Hwy \n2.Mrs.K. ANUPRIYA https://www.google.com/url?q=http%3A%2F%2Faiml_staff&sa=D \n3.Mrs.S.K SUGUNEDHAM https://in.docworkspace.com/d/sIA64hYOQAprqsLcG?sa=cl \n4.Mrs.S. CHITRA https://in.docworkspace.com/d/sIAm4hYOQArTqsLcG?sa=cl \n5.Mr.A. JAINULLABEEN https://in.docworkspace.com/d/sIJC4hYOQAsfqsLcG?sa=cl \n6.Mrs.S. LAVANYA https://in.docworkspace.com/d/sIKC4hYOQAt7qsLcG?sa=cl \n7.Ms.V. NIRIMATHI https://in.docworkspace.com/d/sIPO4hYOQAvDqsLcG?sa=cl \n8.Ms.K. REVATHI https://in.docworkspace.com/d/sIFe4hYOQAoDrsLcG?sa=cl \n9.Mrs.S. PRAVEENA https://in.docworkspace.com/d/sIBm4hYOQAqrrsLcG?sa=cl \n10.Mrs.P. SUGANYA https://in.docworkspace.com/d/sIFS4hYOQArnrsLcG?sa=cl \n11.Mr.R. RENGA NAYAGI https://in.docworkspace.com/d/sIIW4hYOQAtXrsLcG?sa=cl \nThey are the faculty of AIML in 2024-25. You can also check the faculty details by clicking the link next to their name."
+        "answer": "1.Mr.R. Raj Bharath https://ibb.co/HtK7Hwy          \n                                                                                                                                                    2.Mrs.K. ANUPRIYA https://www.google.com/url?q=http%3A%2F%2Faiml_staff&sa=D      \n                                                                                                                                                    3.Mrs.S.K SUGUNEDHAM https://in.docworkspace.com/d/sIA64hYOQAprqsLcG?sa=cl                                                                                                                                           \n                                                                                                                                                    4.Mrs.S. CHITRA https://in.docworkspace.com/d/sIAm4hYOQArTqsLcG?sa=cl                                           \n                                                                                                                                                    5.Mr.A. JAINULLABEEN https://in.docworkspace.com/d/sIJC4hYOQAsfqsLcG?sa=cl                         \n                                                                                                                                                    \n6.Mrs.S. LAVANYA https://in.docworkspace.com/d/sIKC4hYOQAt7qsLcG?sa=cl       \n                                                                                                                                                    7.Ms.V. NIRIMATHI https://in.docworkspace.com/d/sIPO4hYOQAvDqsLcG?sa=cl                     \n                                                                                                                                                    8.Ms.K. REVATHI https://in.docworkspace.com/d/sIFe4hYOQAoDrsLcG?sa=cl          \n                                                                                                                                                    9.Mrs.S. PRAVEENA https://in.docworkspace.com/d/sIBm4hYOQAqrrsLcG?sa=cl       \n                                                                                                                                                  10.Mrs.P. SUGANYA https://in.docworkspace.com/d/sIFS4hYOQArnrsLcG?sa=cl                                          \n                                                                                                                                                  11.Mr.R. RENGA NAYAGI https://in.docworkspace.com/d/sIIW4hYOQAtXrsLcG?sa=cl                                                                                                                                             \n                                                                                                                                                        They are the faculty of AIML in 2024-25. You can also check the faculty details by clicking the link next to their name."
     },
     {
         "id": "Bot name.",
@@ -140,7 +138,7 @@ qa_data = [
             "what  are courses in your clg.",
             "what  are courses in your collage."
         ],
-        "answer": "I have only information about engineering branch. so the engineering courses offered by our collage in the year of 2024-25 are: EEE,ECE,CSE,IT,MECH,RA,FT,IOT and AIML."
+        "answer": "I have only information about engineering branch. so the engineering courses offered by our collage in the year of 2024-25 are:                                                                                                 EEE.                                                                                                                                                                       ECE.                                                                                                                                                                           CSE.                                                                                                                                                                           IT.                                                                                                                                                               MECH.                                                                                                                                                     RA.                                                                                                                                                            FT.                                                                                                                                                         IOT.                                                                                                                                                                   AIML."
     },
     {
         "id": "Default Welcome Intent",
@@ -185,48 +183,49 @@ qa_data = [
             "eee staff",
             "eee faculty"
         ],
-        "answer": "1.Dr.C. SHANMUGASUNDARAM https://in.docworkspace.com/d/sII24hYOQAsy3sLcG?sa=cl \n2.Dr.K. SEDHURAMAN https://in.docworkspace.com/d/sIAK4hYOQAva3sLcG?sa=cl \n3.Mr.S. RAJKUMAR https://in.docworkspace.com/d/sIOa4hYOQAo24sLcG?sa=cl \n4.Mr.N. AMARABALAN https://in.docworkspace.com/d/sIFG4hYOQAru4sLcG?sa=cl \n5.Mr.D. BALAJI https://in.docworkspace.com/d/sICO4hYOQAq_SsLcG?sa=cl \n6.Mr. DMURUGANANDHAN https://in.docworkspace.com/d/sIMW4hYOQAr_SsLcG?sa=cl \n7.Mrs.R. UMAMAHESWARI https://in.docworkspace.com/d/sIJW4hYOQAtDSsLcG?sa=cl \n8.Mrs.S. SANTHALAKSHMY https://in.docworkspace.com/d/sIGW4hYOQAuDSsLcG?sa=cl \n9.Mrs.R. MUTHUNAGAI https://in.docworkspace.com/d/sIF-4hYOQAvLSsLcG?sa=cl \n10.Mrs.R. PRIYA https://in.docworkspace.com/d/sIAK4hYOQAoLTsLcG?sa=cl \n11.Mrs.J. VIJAYA RAGHAVAN https://in.docworkspace.com/d/sIO-4hYOQApHTsLcG?sa=cl \n12.Mr.S. VEERAMANIKANDAN https://in.docworkspace.com/d/sINS4hYOQArvTsLcG?sa=cl \n13.Mr.P. TAMIZHARASAN https://in.docworkspace.com/d/sIH64hYOQAtDTsLcG?sa=cl \n14.Mrs. SUVEDHA https://in.docworkspace.com/d/sIOq4hYOQAt7TsLcG?sa=cl \nThey are the faculty of EEE in 2024-25. You can also check the faculty details by clicking the link next to their name."
+        "answer": "1.Dr.C. SHANMUGASUNDARAM https://in.docworkspace.com/d/sII24hYOQAsy3sLcG?sa=cl                                           \n                                                                                                                  2.Dr.K. SEDHURAMAN https://in.docworkspace.com/d/sIAK4hYOQAva3sLcG?sa=cl                                                                                                                                           \n                                                                                                                                                    3.Mr.S. RAJKUMAR https://in.docworkspace.com/d/sIOa4hYOQAo24sLcG?sa=cl         \n                                                                                                                                                     \n4.Mr.N. AMARABALAN https://in.docworkspace.com/d/sIFG4hYOQAru4sLcG?sa=cl    \n                                                                                                                                                    \n5.Mr.D. BALAJI https://in.docworkspace.com/d/sICO4hYOQAq_SsLcG?sa=cl             \n                                                                                                                                                    \n6.Mr. DMURUGANANDHAN https://in.docworkspace.com/d/sIMW4hYOQAr_SsLcG?sa=cl         \n                                                                                                                                                    7.Mrs.R. UMAMAHESWARI https://in.docworkspace.com/d/sIJW4hYOQAtDSsLcG?sa=cl                                                                                                                                           \n                                                                                                                                                   8.Mrs.S. SANTHALAKSHMY https://in.docworkspace.com/d/sIGW4hYOQAuDSsLcG?sa=cl                                     \n                                                                                                                                                   9.Mrs.R. MUTHUNAGAI https://in.docworkspace.com/d/sIF-4hYOQAvLSsLcG?sa=cl    \n                                                                                                                                                 10.Mrs.R. PRIYA https://in.docworkspace.com/d/sIAK4hYOQAoLTsLcG?sa=cl         \n                                                                                                                                                  11.Mrs.J. VIJAYA RAGHAVAN https://in.docworkspace.com/d/sIO-4hYOQApHTsLcG?sa=cl                                                                                                       \n                                                                                                                                                  12.Mr.S. VEERAMANIKANDAN https://in.docworkspace.com/d/sINS4hYOQArvTsLcG?sa=cl                                      \n                                                                                                                                                  13.Mr.P. TAMIZHARASAN https://in.docworkspace.com/d/sIH64hYOQAtDTsLcG?sa=cl                                                                                                                                    \n                                                                                                                                                  14.Mrs. SUVEDHA https://in.docworkspace.com/d/sIOq4hYOQAt7TsLcG?sa=cl         \n                                                                                                                                                        They are the faculty of EEE in 2024-25. You can also check the faculty details by clicking the link next to their name."
     },
     {
-        "id": "fees for AIML",
+        "id": "1st year fees for aiml",
         "questions": [
-            "artificial intelligence and machine learning fees",
-            "aiml fees",
-            "fees for AIML.",
-            "tell me the fees structure for AIML."
+            "artificial intelligence and machine learning fees for 1st year",
+            "first year aiml fees",
+            "1st fees for AIML.",
+            "fees for AIML"
+            "tell me the fees structure for AIML in first year"
         ],
-        "answer": "The fees structure for AIML  in 2024-25.for centac students is Rs:52,700 and for  management is Rs:81,500."
+        "answer": "The fees structure for AIML in 1st yeart in 2025-26.for centac students is Rs:52,700 and for  management is Rs:81,500."
     },
     {
-        "id": "fees for CSC.",
+        "id": "1st year fees for CSC.",
         "questions": [
-            "computer science and engineering fees",
-            "computer science fees",
-            "cse fees",
+            "1st year computer science and engineering fees",
+            "computer science fees for first year",
+            "cse fees fro 1st year",
             "fees for CSE.",
-            "tell me the fees structure for CSE."
+            "tell me the fees structure for CSE dept in 1st year"
         ],
-        "answer": "The fees structure for CSE in 2024-25.for centac students is Rs:62,700 and for management students is Rs:91,500"
+        "answer": "The fees structure for CSE in 1st year in 2025-26.for centac students is Rs:62,700 and for management students is Rs:91,500"
     },
     {
-        "id": "fees for ECE",
+        "id": "1st year fees for ECE",
         "questions": [
-            "electronics and communication engineering fees",
-            "ece fees",
-            "fess for ECE",
-            "tell me the fees structure for ECE."
+            "electronics and communication engineering fees for 1st year",
+            "1st year ece fees",
+            "fess details for ECE in mvit",
+            "tell me the first year fees structure for ECE."
         ],
-        "answer": "The fess structure for ECE in 2024-25.for centac students is Rs:62,700 and for management students is Rs:81,500."
+        "answer": "The fess structure for ECE in 1st year in 2025-26.for centac students is Rs:62,700 and for management students is Rs:81,500."
     },
     {
-        "id": "fees for FT",
+        "id": "1st year fees for FT",
         "questions": [
             "food technology fees",
             "ft fees",
             "fees for FT.",
             "tell me the fees structure for FT."
         ],
-        "answer": "The fees structure for FT in 2024-25.for centac students is Rs:52,700 and for management students is Rs:71,500."
+        "answer": "The fees structure for FT in 2025-26.for centac students is Rs:52,700 and for management students is Rs:71,500."
     },
     {
         "id": "fees for IOT",
@@ -289,7 +288,7 @@ qa_data = [
             "ft faculty",
             "ft staff"
         ],
-        "answer": "1.Dr.D. Tiroutchelvame https://in.docworkspace.com/d/sICO4hYOQAsf5sLcG?sa=cl  \n2.Dr.S. Aruna https://in.docworkspace.com/d/sIEy4hYOQAvv5sLcG?sa=cl                  \n                                                                                                                                                    3.Dr.S. Santhalakshmy https://in.docworkspace.com/d/sICe4hYOQAor6sLcG?sa=cl   \n                                                                                                                                                    4.Dr.R. Baghya Nisha https://in.docworkspace.com/d/sILm4hYOQApj6sLcG?sa=cl                                        \n                                                                                                                                                    5.Er.R. Shailajha https://in.docworkspace.com/d/sIGi4hYOQAqn6sLcG?sa=cl            \n                                                                                                                                                    6.Er. Vimal,H https://in.docworkspace.com/d/sIKK4hYOQArr6sLcG?sa=cl                   \n                                                                                                                                                    7.Er.S. Indumathi https://in.docworkspace.com/d/sIG64hYOQAsb6sLcG?sa=cl                   \n                                                                                                                                                    8.Er.M .Nithyapriya (link is not available)                                                                              \n                                                                                                                                                     They are the faculty of FT in 2024-25. You can also check the faculty details by clicking the link next to their name."
+        "answer": "1.Dr.D. Tiroutchelvame https://in.docworkspace.com/d/sICO4hYOQAsf5sLcG?sa=cl  \n                                                                                                                                                    2.Dr.S. Aruna https://in.docworkspace.com/d/sIEy4hYOQAvv5sLcG?sa=cl                  \n                                                                                                                                                    3.Dr.S. Santhalakshmy https://in.docworkspace.com/d/sICe4hYOQAor6sLcG?sa=cl   \n                                                                                                                                                    4.Dr.R. Baghya Nisha https://in.docworkspace.com/d/sILm4hYOQApj6sLcG?sa=cl                                        \n                                                                                                                                                    5.Er.R. Shailajha https://in.docworkspace.com/d/sIGi4hYOQAqn6sLcG?sa=cl            \n                                                                                                                                                    6.Er. Vimal,H https://in.docworkspace.com/d/sIKK4hYOQArr6sLcG?sa=cl                   \n                                                                                                                                                    7.Er.S. Indumathi https://in.docworkspace.com/d/sIG64hYOQAsb6sLcG?sa=cl                   \n                                                                                                                                                    8.Er.M .Nithyapriya (link is not available)                                                                              \n                                                                                                                                                     They are the faculty of FT in 2024-25. You can also check the faculty details by clicking the link next to their name."
     },
     {
         "id": "good afternoon",
@@ -348,7 +347,7 @@ qa_data = [
             "library in our clg",
             "library"
         ],
-        "answer": "img:/static/images/li.jpeg"
+        "answer": "The College Central library has a collection of 17415 books, in different subjects like, Basic Sciences, Engineering & Technology and Management etc., Open access system is followed in the library. All the library transactions are computerized & Bar coded."
     },
     {
         "id": "mech_staff",
@@ -607,82 +606,111 @@ qa_data = [
         "answer": "The vision and mission of the clg is given below"
     },
     {
-        "id": "College Building Image",
+        "id": "how are you",
         "questions": [
-            "college building image",
-            "mvit building photo",
-            "photo of college",
-            "clg pic",
-            "campus building picture"
+            "how are you",
+            "hwo are you",
+            "how aer you",
+            "how are yuo"
         ],
-        "answer": "img:/static/images/college.jpeg"
+        "answer": "I am Good"
     },
     {
-        "id": "Hostel Image",
+        "id": "work",
         "questions": [
-            "hostel image",
-            "clg hostel photo",
-            "show me hostel picture",
-            "mvit hostel pic"
+            "what can you do",
+            "what is your work",
+            "waht is work",
+            "tell me about your nwork",
+            "tell me about your work",
+            "what are you doing"
         ],
-        "answer": "img:/static/images/hostel.jpg"
+        "answer": "I give information about MVIT clg"
     },
     {
-        "id": "Sports Ground Image",
+        "id": "doing",
         "questions": [
-            "sports ground image",
-            "playground photo",
-            "mvit sports pic",
-            "clg ground picture"
+            "how are you doing",
+            "how are you"
         ],
-        "answer": "img:/static/images/sports.jpg"
-    }
+        "answer": "I am doing Good"
+    },
 ]
 
-# -------------------- PREPROCESS --------------------
-question_to_answer = {}
-all_questions = []
+HTML_TEMPLATE = '''
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MVIT Chatbot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        #chatbox { max-width: 800px; margin: 50px auto; padding: 30px; background: #ffffff; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .message { margin: 10px 0; }
+        .user { text-align: right; color: #0d6efd; }
+        .bot { text-align: left; color: #198754; }
+        .bubble { padding: 10px 15px; border-radius: 15px; display: inline-block; max-width: 80%; }
+        .user .bubble { background: #e7f1ff; }
+        .bot .bubble { background: #e9fbe9; }
+    </style>
+</head>
+<body>
+    <div id="chatbox" class="container">
+        <h3 class="text-center mb-4">🎓 MVIT Chatbot</h3>
+        <div id="chatlog" class="mb-3"></div>
+        <div class="input-group">
+            <input type="text" id="user_input" class="form-control" placeholder="Ask something...">
+            <button class="btn btn-primary" onclick="send()">Send</button>
+        </div>
+    </div>
 
-for entry in qa_data:
-    for q in entry["questions"]:
-        ql = q.lower().strip()
-        question_to_answer[ql] = entry["answer"]
-        all_questions.append(ql)
+    <script>
+        function send() {
+            let input = document.getElementById("user_input");
+            let msg = input.value.trim();
+            if (!msg) return;
 
-spell = SpellChecker()
+            let chatlog = document.getElementById("chatlog");
+            chatlog.innerHTML += "<div class='message user'><div class='bubble'>" + msg + "</div></div>";
 
-def find_best_match(user_input):
-    ui = (user_input or "").lower().strip()
-    if not ui:
-        return "Please type a question."
-    if ui in question_to_answer:
-        return question_to_answer[ui]
-    match = difflib.get_close_matches(ui, all_questions, n=1, cutoff=0.70)
-    if match:
-        return question_to_answer[match[0]]
-    return "Answer not available."
+            fetch("/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message: msg })
+            })
+            .then(res => res.json())
+            .then(data => {
+                chatlog.innerHTML += "<div class='message bot'><div class='bubble'>" + data.reply + "</div></div>";
+                input.value = "";
+                chatlog.scrollTop = chatlog.scrollHeight;
+            });
+        }
 
-# -------------------- ROUTES --------------------
+        document.getElementById("user_input").addEventListener("keypress", function(e) {
+            if (e.key === "Enter") send();
+        });
+    </script>
+</body>
+</html>
+'''
+
+def find_answer(user_input):
+    user_input = user_input.lower()
+    for item in qa_data:
+        for q in item["questions"]:
+            if user_input in q.lower():
+                return item["answer"]
+    return "Sorry, I don't have an answer for that."
+
 @app.route('/')
-def index():
-    return render_template('index.html')
+def home():
+    return render_template_string(HTML_TEMPLATE)
 
-@app.route('/get', methods=['POST'])
-def get_bot_response():
-    data = request.get_json(force=True) or {}
-    user_message = data.get('msg', '')
-
-    words = user_message.lower().split()
-    corrected_words = [spell.correction(word) for word in words]
-    corrected_text = " ".join(corrected_words)
-
-    reply = find_best_match(corrected_text)
-
-    # If reply is an image path, return image in response
-    if reply.startswith("/static/"):
-        return jsonify({"reply": "Here is the picture you asked for:", "image": reply})
-    else:
-        return jsonify({"reply": reply, "image": None})
+@app.route('/chat', methods=['POST'])
+def chat():
+    message = request.json.get("message", "")
+    reply = find_answer(message)
+    return jsonify({"reply": reply})
 
 if __name__ == '__main__':
     app.run(debug=True)
