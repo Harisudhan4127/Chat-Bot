@@ -5,6 +5,7 @@ from spellchecker import SpellChecker
 app = Flask(__name__)
 
 # -------------------- Q&A DATA --------------------
+
 qa_data = [
         {
         "id": "Admission in collage.",

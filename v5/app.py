@@ -663,6 +663,7 @@ def find_best_match(user_input):
     return "Answer not available."
 
 # -------------------- ROUTES --------------------
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -679,6 +680,7 @@ def get_bot_response():
     reply = find_best_match(corrected_text)
 
     # If reply is an image path, return image in response
+    
     if reply.startswith("/static/"):
         return jsonify({"reply": "Here is the picture you asked for:", "image": reply})
     else:

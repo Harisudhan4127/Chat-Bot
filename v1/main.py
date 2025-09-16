@@ -4,7 +4,6 @@ from rapidfuzz import process
 app = Flask(__name__)
 
 qa_data =  [ 
-    # ⛔ Paste your full JSON Q&A data here
     {
         "id": "Admission in collage.",
         "questions": [
