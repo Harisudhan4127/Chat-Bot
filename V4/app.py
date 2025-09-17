@@ -39,15 +39,15 @@ qa_data = [
             "staff aiml"
         ],
         "answer": "1.Mr.R. RAJ BHARATH <br> img:/static/images/computer_lab.jpeg <br>"
-        "2.Mrs.S.K SUGUNEDHAM <br> img:/static/images/sugunedham_aiml.jpeg <br>"
-        "3.Mrs.S. CHITRA <br> https://in.docworkspace.com/d/sIAm4hYOQArTqsLcG?sa=cl <br>"
-        "4.Mr.A. JAINULLABEEN <br> https://in.docworkspace.com/d/sIJC4hYOQAsfqsLcG?sa=cl <br>"
-        "5.Mrs.S. LAVANYA <br> https://in.docworkspace.com/d/sIKC4hYOQAt7qsLcG?sa=cl  <br>"
-        "6.Ms.V. NIRIMATHI <br> https://in.docworkspace.com/d/sIPO4hYOQAvDqsLcG?sa=cl  <br>"
-        "7.Ms.K. REVATHI <br> https://in.docworkspace.com/d/sIFe4hYOQAoDrsLcG?sa=cl   <br>"
-        "8.Mrs.S. PRAVEENA <br> https://in.docworkspace.com/d/sIBm4hYOQAqrrsLcG?sa=cl  <br>"
-        "9.Mrs.P. SUGANYA <br> https://in.docworkspace.com/d/sIFS4hYOQArnrsLcG?sa=cl  <br>"
-        "10.Mr.R. RENGA NAYAGI <br> https://in.docworkspace.com/d/sIIW4hYOQAtXrsLcG?sa=cl  <br>"
+        "2.Mrs.S.K SUGUNEDHAM <br> https://i.ibb.co/sS1sp64/Screenshot-20250917-100823.jpg <br>"
+        "3.Mrs.S. CHITRA <br> https://i.ibb.co/JWHkZzyQ/Screenshot-20250917-100838.jpg <br>"
+        "4.Mr.A. JAINULLABEEN <br> https://i.ibb.co/WvRywr5b/Screenshot-20250917-100856.jpg <br>"
+        "5.Mrs.S. LAVANYA <br>https://i.ibb.co/C5D6Cwtc/Screenshot-20250917-100926.jpg  <br>"
+        "6.Ms.V. DIANA <br> https://i.ibb.co/qLvDRTb8/Screenshot-20250917-101145.jpg  <br>"
+        "7.Ms.K. REVATHI <br> https://i.ibb.co/vx96FNV9/Screenshot-20250917-101009.jpg  <br>"
+        "8.Mrs.S. PRAVEENA <br> https://i.ibb.co/8D8TDKnR/Screenshot-20250917-101057.jpg  <br>"
+        "9.Mrs.P. SUGANYA <br> https://i.ibb.co/7txkqXCt/Screenshot-20250917-101119.jpg  <br>"
+        "10.Mr.R. RENGA NAYAGI <br> https://i.ibb.co/vxX4cYFX/Screenshot-20250917-101134.jpg  <br>"
         "They are the faculty of AIML in 2025-26. You can also check the faculty details by clicking the link next to their name."
     },
     {
@@ -171,7 +171,11 @@ qa_data = [
             "courses in your clg.",
             "courses in your collage.",
             "what  are courses in your clg.",
-            "what  are courses in your collage."
+            "what  are courses in your collage.",
+            "deprtments",
+            "departments in our clg",
+            "what are the deparments are in mvit",
+            "dept"
         ],
         "answer": "I have only information about engineering branch.<br>"
         " so the engineering courses offered by our collage in the year of 2025-26 are:<br>"
@@ -235,6 +239,81 @@ qa_data = [
         "13.Mr.P. TAMIZHARASAN <br> https://in.docworkspace.com/d/sIH64hYOQAtDTsLcG?sa=cl  <br>"
         "14.Mrs. SUVEDHA <br> https://in.docworkspace.com/d/sIOq4hYOQAt7TsLcG?sa=cl <br>"
         "They are the faculty of EEE in 2025-26. You can also check the faculty details by clicking the link next to their name."
+    },
+    {
+        "id": "ece_staff",
+        "questions": [
+            "Ec e mentors",
+            "EcE teachers",
+            "ece professers",
+            "ECE staff",
+            "ECE faculty",
+            "staff ece",
+            "EcE STAFF",
+            "electronics and communication engineering staff"
+        ],
+        "answer":"1Dr.A.THENMOZHI	(PROFESSOR) <br>"
+                 "2Dr.R.VALLI (PROFESSOR) <br>"
+                 "3Dr.S.ARUNMOZHI  (PROFESSOR) <br>"
+                 "4Dr.M.JAYEKUMAR	(PROFESSOR) <br>"
+                 "5Dr.S.SEMMALAR (ASSOCIATE PROFESSOR) <br>"
+                 "6Dr.R.SOFIA (ASSOCIATE PROFESSOR) <br>"
+                 "7Dr.V.GOWTHAMI  (ASSOCIATE PROFESSOR) <br>"
+                 "8Dr.S.VINOTH  (ASSOCIATE PROFESSOR) <br>"
+                 "9Dr.M.SIVASINDHU  (ASSOCIATE PROFESSOR) <br>"
+                 "10Mr.V.RAJESH  (ASSISTANT PROFESSOR) <br>"
+                 "11Mr.K.KUMARAN  (ASSISTANT PROFESSOR) <br>"
+                 "12Ms.K.ALAMELU  (ASSISTANT PROFESSOR) <br> They are the faculty of ECE in 2025-26."
+    },
+    {
+        "id": "cse_staff",
+        "questions": [
+            "cse mentors",
+            "CSE teachers",
+            "Cse professers",
+            "cse staff",
+            "cse faculty",
+            "staff cse",
+            "cse STAFF",
+            "computer science engineering staff"
+        ],
+        "answer":"1.Dr. S.Pariselvam <br>"
+                 "2.Mr. P. Anandajayam <br>"
+                 "3.Mr. R. Sathish Kumar <br>"
+                 "4.Mrs. I. Varalakshmi <br>"
+                 "5.Mrs. V. Selvi <br>"
+                 "6.Ms. S. Kalaivani <br>"
+                 "7.Mr.P.Sathiyanarayanan <br>"
+                 "8.Mr.A.Sankaran <br>"
+                 "9.Mrs.R.Indumathi <br>"
+                 "10.Mrs.K.Nandhini <br>"
+                 "11.Mr.R.Aravindan <br>"
+                 "12.Ms.Nirmala <br> They are the faculty of CSE in 2025-26."
+    },
+    {
+        "id": "it_staff",
+        "questions": [
+            "it mentors",
+            "IT teachers",
+            "i t professers",
+            "IT staff",
+            "it faculty",
+            "staff it",
+            "it STAFF",
+            "information technology staff"
+        ],
+        "answer": "1.Dr.P.Sivakumar <br>"
+                  "2.Dr.A. Meiappane <br>"
+                  "3.Mr. S. Uthayashangar <br>"
+                  "4.Ms. A. Punitha <br>"
+                  "5.Ms. J. Prabavadhi <br>"
+                  "6.Mr. K. Premkumar <br>"
+                  "7.	Mrs.L.Sankari <br>"
+                  "8.Mr.S.Shanmugasundaram <br>"
+                  "9.Ms.R.Dhamayanthi <br>"
+                  "10.Ms.V.Abirami <br>"
+                  "11.Mrs.D.Sudha <br>"
+                  "12.Mrs. G. Anuradha <br> They are the faculty of IT in 2025-26."
     },
     {
         "id": "fees for AIML",
@@ -877,7 +956,7 @@ qa_data = [
             "tell me the name of the principal",
             "mvit principal"
         ],
-        "answer": "Dr.S.Malarkkan"
+        "answer": "Dr.S.Malarkkan is our collage Principal"
     },
     {
         "id":"trustee",
@@ -889,7 +968,7 @@ qa_data = [
             "tell me the name of the trustee",
             "mvit trustree"
         ],
-        "answer": "Mrs.V.Nirmala<br> Mrs.D.Geetha"
+        "answer": "Mrs.V.Nirmala<br> Mrs.D.Geetha<br> They are the trustee of our college"
     },
     {
         "id":"vice chairperson",
@@ -902,9 +981,263 @@ qa_data = [
             "mvit vicechairperson",
             "vicechairperson"
         ],
-        "answer": " Mrs.K.Nalini"
+        "answer": " Mrs.K.Nalini is the vice chairperson of our collage"
     },
-    
+    {
+        "id":"secretary",
+        "questions": [
+            "secretary",
+            "secretary of mvit",
+            "secretary",
+            "who is the secretary of mvit",
+            "tell me the name of the secretary",
+            "mvit secretary",
+            "secretary"
+        ],
+        "answer": " Mrs.K.Nalini is the vice chairperson of our collage"
+    },
+    {
+        "id":"secretary",
+        "questions": [
+            "secretary",
+            "secretary of mvit",
+            "secretary",
+            "who is the secretary of mvit",
+            "tell me the name of the secretary",
+            "mvit secretary",
+            "secretary"
+        ],
+        "answer": " Mrs.K.Nalini is the vice chairperson of our collage"
+    },
+    {
+        "id":"secretary",
+        "questions": [
+            "secretary",
+            "secretary of mvit",
+            "secretary",
+            "who is the secretary of mvit",
+            "tell me the name of the secretary",
+            "mvit secretary",
+            "secretary"
+        ],
+        "answer": " Mrs.K.Nalini is the vice chairperson of our collage"
+    },
+    {
+        "id":"Treasurer",
+        "questions": [
+            "Treasurer",
+            "treasurer of mvit",
+            "treasurer",
+            "who is the treasurer of mvit",
+            "tell me the name of the treasurer",
+            "mvit treasurer",
+            "treasurer"
+        ],
+        "answer": "Shri.S.V. Sugamaran is the vice Treasurer of our collage"
+    },
+    {
+        "id":"chairman",
+        "questions": [
+            "chairman",
+            "chairman of mvit",
+            "Chairman",
+            "who is the Chairman of mvit",
+            "tell me the name of the chairman",
+            "mvit CHAIRMAIN",
+            "Chairman"
+        ],
+        "answer": "M. Dhanasekaran is the Chairman of our collage"
+    },
+    {
+        "id":"founder",
+        "questions": [
+            "founder",
+            "founder of mvit",
+            "founder",
+            "who is the founder of mvit",
+            "tell me the name of the founder",
+            "mvit FOUNDER",
+            "founder"
+        ],
+        "answer": "N.Kesavan is the Founder of our collage"
+    },
+    {
+        "id": "creator",
+        "questions": [
+            "who created you",
+            "creator",
+            "creater",
+            "who makes you",
+            "who is your boss",
+            "who makes you",
+            "maker",
+            "give creater name",
+            "name of the creator",
+            "your owner",
+            "woned by who",
+            "who woned you"
+        ],
+        "answer": "Mr.R.Avinash is my creator"
+    },
+    {
+        "id": "purpose",
+        "questions": [
+            "purpose",
+            "what purpose do you created",
+            "what is your purpose",
+            "tell me your features",
+            "what is your feature",
+            "purpose of mvit chatbot",
+            "purpose of ak chatbot",
+            "narrow chatbot purpose",
+            "purpose of narrow chatbot",
+            "purpose of you",
+            "purpose of the chatbot",
+            "why you made",
+            "why you make"
+        ],
+        "answer": "I’m a fast, I understand and generate clear responses on many topics and available 24/7, Multiple user can easily access me at same time, turn complex search into simple input, so you save time and get practical answers quickly."
+    },
+    {
+        "id": "placement percentage",
+        "questions": [
+            "How many students are graduated in mvit",
+            "graduation percrntage in mvit"
+            "no of placed percentage in mvit",
+            "placement percentage",
+            "percentage of placed students",
+            "How many students are placement in mvit",
+            "what is percentage of placement in mvit",
+            "mvit placements",
+            "placement record",
+            "placement record in mvit",
+            "placement"
+        ],
+        "answer": "Manakula vinayagar Institute of Technology has 90% placement records "
+    },
+    {
+        "id": "contact number",
+        "questions": [
+            "phone number",
+            "contact details",
+            "contact information",
+            "mvit phonenumber",
+            "mit mobile number",
+            "mit mail id",
+            "mail",
+            "mail id",
+            "mail information",
+            "give mail id and phone number",
+            "give phone number and mail id",
+            "how can we contact you",
+            "phone",
+            "contact"
+        ],
+        "answer": "You can contact MVIT through <br> Phone- 0413-2643007, <br> 9498093535 <br> Mail- principal@mvit.edu.in"
+    },
+    {
+        "id":"events",
+        "questions": [
+            "events in mvit",
+            "events",
+            "what are the events in mvit",
+            "events conducted in mvit",
+            "elan 2025",
+            "programs",
+            "programs in mvit clg",
+            "elan"
+        ],
+        "answer": "img:/static/images/elan_event.jpeg"
+    },
+    {
+        "id": "no of computer",
+        "questions":[
+            "number of computer are there in mvit",
+            "how many system are in mvit",
+            "no of system in mvit",
+            "systems in mvit",
+            "how many desktop are in mvit labs",
+            "how much computer used for work in mvit",
+            "computers in mvit"
+        ],
+        "answer":"Mvit has 558 computers"
+    },
+    {
+        "id": "no of server",
+        "questions":[
+            "number of servers are there in mvit",
+            "servers",
+            "total servers in mvit",
+            "Total servers"
+        ],
+        "answer":"Mvit has 6 servers"
+    },
+    {
+        "id": "network",
+        "questions":[
+            "network used",
+            "network",
+            "internet in mvit",
+            "which network is used in mvit"
+        ],
+        "answer":"Mvit has BSNL internet service"
+    },
+    {
+        "id": "cells",
+        "questions":[
+            "cells in mvit",
+            "cells",
+            "cell",
+            "committes in mvit",
+            "what are the cells are in mvit",
+            "cells of mvit",
+            "what are the committe are in mvit",
+            "committe of mvit",
+            "committe",
+            "committes"
+        ],
+        "answer":"1.Academic Planning committee <br>"
+                 "2.Quality Assessment Committee (QAC) <br>"
+                 "3.Academic Audit committee <br>"
+                 "4.Budget and finance committee <br>"
+                 "5.College News Letter, Magazine, Prospectus committee <br>"
+                 "6.Sports committee <br>"
+                 "7.Cultural committee <br>"
+                 "8.Anti-ragging committee <br>"
+                 "9.Grievances Redressal committee <br>"
+                 "10.Transport committee <br>"
+                "11.Discipline Committee <br>"
+                "12.Mentoring Committee and counseling <br>"
+                "13.Purchase committee <br>"
+                "14.Infrastructure Management / Time table committee <br>"
+                "15.HoDs committee <br>"
+                "16.Hods sub committee <br>"
+                "17.Canteen committee <br>"
+                "18.Hostel committee <br>"
+                "19.Code of Conduct Committee <br> These are the committes/cells of MVIT."
+    },
+    {
+       "id": "no of cells",
+        "questions":[
+            " no ofcells in mvit",
+            "how many cells are in mvit",
+            "total no of cells",
+            "no of committes in mvit",
+            "total no of committee are in mvit",
+        ],
+        "answer":"No of cells/committee in MVIT is 19" 
+    },
+    {
+        "id": "link",
+        "questions":[
+            "link",
+            "give me the link",
+            "i want link",
+            "send the link"
+        ],
+        "answer": "https://mvit.edu.in/<br> (you can visit our clg website)"
+    }
+
 ]
 
 # -------------------- PREPROCESS --------------------
