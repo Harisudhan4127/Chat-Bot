@@ -38,17 +38,16 @@ qa_data = [
             "aiml faculty",
             "staff aiml"
         ],
-        "answer": "1.Mr.R. RAJ BHARATH <br> https://ibb.co/HtK7Hwy <br>"
-        "2.Mrs.K. ANUPRIYA <br> https://www.google.com/url?q=http%3A%2F%2Faiml_staff&sa=D <br>"
-        "3.Mrs.S.K SUGUNEDHAM <br> https://in.docworkspace.com/d/sIA64hYOQAprqsLcG?sa=cl <br>"
-        "4.Mrs.S. CHITRA <br> https://in.docworkspace.com/d/sIAm4hYOQArTqsLcG?sa=cl <br>"
-        "5.Mr.A. JAINULLABEEN <br> https://in.docworkspace.com/d/sIJC4hYOQAsfqsLcG?sa=cl <br>"
-        "6.Mrs.S. LAVANYA <br> https://in.docworkspace.com/d/sIKC4hYOQAt7qsLcG?sa=cl  <br>"
-        "7.Ms.V. NIRIMATHI <br> https://in.docworkspace.com/d/sIPO4hYOQAvDqsLcG?sa=cl  <br>"
-        "8.Ms.K. REVATHI <br> https://in.docworkspace.com/d/sIFe4hYOQAoDrsLcG?sa=cl   <br>"
-        "9.Mrs.S. PRAVEENA <br> https://in.docworkspace.com/d/sIBm4hYOQAqrrsLcG?sa=cl  <br>"
-        "10.Mrs.P. SUGANYA <br> https://in.docworkspace.com/d/sIFS4hYOQArnrsLcG?sa=cl  <br>"
-        "11.Mr.R. RENGA NAYAGI <br> https://in.docworkspace.com/d/sIIW4hYOQAtXrsLcG?sa=cl  <br>"
+        "answer": "1.Mr.R. RAJ BHARATH <br> img:/static/images/computer_lab.jpeg <br>"
+        "2.Mrs.S.K SUGUNEDHAM <br> img:/static/images/sugunedham_aiml.jpeg <br>"
+        "3.Mrs.S. CHITRA <br> https://in.docworkspace.com/d/sIAm4hYOQArTqsLcG?sa=cl <br>"
+        "4.Mr.A. JAINULLABEEN <br> https://in.docworkspace.com/d/sIJC4hYOQAsfqsLcG?sa=cl <br>"
+        "5.Mrs.S. LAVANYA <br> https://in.docworkspace.com/d/sIKC4hYOQAt7qsLcG?sa=cl  <br>"
+        "6.Ms.V. NIRIMATHI <br> https://in.docworkspace.com/d/sIPO4hYOQAvDqsLcG?sa=cl  <br>"
+        "7.Ms.K. REVATHI <br> https://in.docworkspace.com/d/sIFe4hYOQAoDrsLcG?sa=cl   <br>"
+        "8.Mrs.S. PRAVEENA <br> https://in.docworkspace.com/d/sIBm4hYOQAqrrsLcG?sa=cl  <br>"
+        "9.Mrs.P. SUGANYA <br> https://in.docworkspace.com/d/sIFS4hYOQArnrsLcG?sa=cl  <br>"
+        "10.Mr.R. RENGA NAYAGI <br> https://in.docworkspace.com/d/sIIW4hYOQAtXrsLcG?sa=cl  <br>"
         "They are the faculty of AIML in 2025-26. You can also check the faculty details by clicking the link next to their name."
     },
     {
@@ -64,7 +63,7 @@ qa_data = [
     {
         "id": "bus_clg",
         "questions": [
-            "mvit fan",
+            "mvit bus",
             "buses in mvit clg",
             "buses in mvit",
             "mvit bus routes",
@@ -72,7 +71,23 @@ qa_data = [
             "manakula vinayagar institute of technology buses",
             "mvit bus details",
             "clg bus details",
-            "clg bus"
+            "clg bus",
+            "bus details"
+        ],
+        "answer": "img:/static/images/bus_fees.jpeg"
+    },
+    {
+        "id": "bus image",
+        "questions": [
+            "mvit bus image",
+            "buses images mvit clg",
+            "buses pic in mvit",
+            "mvit bus pics",
+            "mvit bus pictures",
+            "manakula vinayagar institute of technology bus image",
+            "mvit bus pic",
+            "clg bus photo",
+            "clg photos"
         ],
         "answer": "img:/static/images/bus.jpeg"
     },
@@ -680,7 +695,7 @@ qa_data = [
             "vision and mission of the manakula vinayagar institute of technology collage",
             "vision and mission of the mvit collage"
         ],
-        "answer": "The vision and mission of the clg is given below"
+        "answer": "img:/static/images/vision.jpeg"
     },
     {
         "id": "College Building Image",
@@ -731,7 +746,165 @@ qa_data = [
             "mit bot"
         ],
         "answer": "yeah,Tell me, How can I hell you?"
-    }
+    },
+    {
+        "id": "boys Hostel",
+        "questions": [
+            "boys hostel image",
+            "boys hostel photo",
+            "show me hostel picture of boy",
+            "mvit boys hostel pic",
+            "boys hostel",
+            "boys hostal",
+            "boys hostel in mvit",
+            "boys hostel",
+            "boys hostel"
+        ],
+        "answer": "img:/static/images/boys_hostel.jpeg" 
+    },
+    {
+        "id": "girls Hostel",
+        "questions": [
+            "girls hostel image",
+            "girls hostel photo",
+            "show me hostel picture of girls",
+            "mvit girls hostel pic",
+            "girl hostel",
+            "girls hostal",
+            "girl hostel in mvit",
+            "girl hostel",
+            "girls hostel"
+        ],
+        "answer": "img:/static/images/hostal.jpeg" 
+    },
+    {
+        "id": "PET ground",
+        "questions": [
+            "mvit pt ground",
+            "mit pet ground",
+            "MVIT p.e.t ground",
+            "sports ground in mvit",
+            "sports place",
+            "ground"
+        ],
+        "answer": "img:/static/images/pet_ground.jpeg"
+    },
+    {
+        "id": "volleyball ground",
+        "questions": [
+            "mvit volleyball ground",
+            "mit volley ball ground",
+            "MVIT volley ball ground",
+            "volley ground in mvit",
+            "volley ball place",
+            "volleyball ground",
+            "volleyball",
+            "volley ball"
+        ],
+        "answer": "img:/static/images/volleyball_ground.jpeg"
+    },
+    {
+        "id": "basketball ground",
+        "questions": [
+            "mvit Basketball ground",
+            "mit basket ground",
+            "MVIT basket_ball ground",
+            "basket ground in mvit",
+            "basket ball place",
+            "basketball ground",
+            "basketball",
+            "basket ball"
+        ],
+        "answer": "img:/static/images/basketball_ground.jpeg"
+    },
+    {
+        "id": "companies",
+        "questions": [
+            "no of companies in mvit clg",
+            "number of company are there in mit",
+            "how many companies are in mvit",
+            "companies",
+            "no of company"
+        ],
+        "answer": "MVIT has tie up with 50+ companies"
+    },
+    {
+        "id": "companies",
+        "questions": [
+            "what are the companies in mvit",
+            "company collab with mit",
+            "some company tie up with mvit",
+            "what company are partnership with mvit",
+            "name the company collabrated with MVIT",
+            "comapanies names",
+            "company name",
+            "name of the company",
+            "what are the company in mvit"
+        ],
+        "answer": "Google,<br> Microsoft,<br> TCS,<br> Virtusa,<br> Zoho etc"
+    },
+    {
+        "id": "no of students",
+        "questions": [
+            "no of students in mvit",
+            "number of students studying in mvit",
+            "total of students in mvit",
+            "how many students are there in mvit",
+            "mit students",
+            "total no of students in mit"
+        ],
+        "answer": "MVIT currently has 3000+ students"
+    },
+    {
+        "id":"no of labs",
+        "questions": [
+            "no of labs in mvit",
+            "number of lab in mvit",
+            "total of labs in mvit",
+            "how many Lab are there in mvit",
+            "mit LABS",
+            "total no of labs in mit"
+        ],
+        "answer": "MVIT has Total 11 labs"
+    },
+    {
+        "id":"principal",
+        "questions": [
+            "principal",
+            "principle of mvit",
+            "principal of mit",
+            "who is the principal of mvit",
+            "tell me the name of the principal",
+            "mvit principal"
+        ],
+        "answer": "Dr.S.Malarkkan"
+    },
+    {
+        "id":"trustee",
+        "questions": [
+            "trustee",
+            "trustee of mvit",
+            "truste of mit",
+            "who is the trustee of mvit",
+            "tell me the name of the trustee",
+            "mvit trustree"
+        ],
+        "answer": "Mrs.V.Nirmala<br> Mrs.D.Geetha"
+    },
+    {
+        "id":"vice chairperson",
+        "questions": [
+            "vice chairperson",
+            "vice charperson of mvit",
+            "vice charperson",
+            "who is the vice chairperson of mvit",
+            "tell me the name of the vicecharperson",
+            "mvit vicechairperson",
+            "vicechairperson"
+        ],
+        "answer": " Mrs.K.Nalini"
+    },
+    
 ]
 
 # -------------------- PREPROCESS --------------------
