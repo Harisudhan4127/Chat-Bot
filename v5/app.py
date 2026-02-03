@@ -713,16 +713,7 @@ qa_data = [
         ],
         "answer": "img:/static/images/hostel.jpg"
     },
-    {
-        "id": "Sports Ground Image",
-        "questions": [
-            "sports ground image",
-            "playground photo",
-            "mvit sports pic",
-            "clg ground picture"
-        ],
-        "answer": "img:/static/images/sports.jpg"
-    }
+    
 ]
 
 

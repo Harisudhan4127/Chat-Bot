@@ -1,13 +1,11 @@
-from flask import Flask, request, jsonify, render_template
-import difflib
-from spellchecker import SpellChecker
+from flask import Flask, request, jsonify, render_template_string
+import json
 
 app = Flask(__name__)
 
-# -------------------- Q&A DATA --------------------
-
-qa_data = [
-        {
+qa_data = [ 
+    # ⛔ Paste your full JSON Q&A data here
+    {
         "id": "Admission in collage.",
         "questions": [
             "admission in mvit clg",
@@ -23,10 +21,9 @@ qa_data = [
             "I want to put admission for CSE course in your collage.",
             "I want to put admission for ECE course in your collage.",
             "I want to put admission for EEE course in your collage.",
-            "admission for EEE.",
-            "admission"
+            "admission for EEE."
         ],
-        "answer": "https://forms.gle/rCcmmLxLe1waj3tJ8 <br> (you can put your admission by using this link)"
+        "answer": "https://forms.gle/rCcmmLxLe1waj3tJ8 (you can put your admission by using this link)"
     },
     {
         "id": "AIML_STAFF",
@@ -35,8 +32,7 @@ qa_data = [
             "aiml professors",
             "aiml teachers",
             "aiml staff",
-            "aiml faculty",
-            "staff aiml"
+            "aiml faculty"
         ],
         "answer": "1.Mr.R. Raj Bharath https://ibb.co/HtK7Hwy          \n                                                                                                                                                    2.Mrs.K. ANUPRIYA https://www.google.com/url?q=http%3A%2F%2Faiml_staff&sa=D      \n                                                                                                                                                    3.Mrs.S.K SUGUNEDHAM https://in.docworkspace.com/d/sIA64hYOQAprqsLcG?sa=cl                                                                                                                                           \n                                                                                                                                                    4.Mrs.S. CHITRA https://in.docworkspace.com/d/sIAm4hYOQArTqsLcG?sa=cl                                           \n                                                                                                                                                    5.Mr.A. JAINULLABEEN https://in.docworkspace.com/d/sIJC4hYOQAsfqsLcG?sa=cl                         \n                                                                                                                                                    \n6.Mrs.S. LAVANYA https://in.docworkspace.com/d/sIKC4hYOQAt7qsLcG?sa=cl       \n                                                                                                                                                    7.Ms.V. NIRIMATHI https://in.docworkspace.com/d/sIPO4hYOQAvDqsLcG?sa=cl                     \n                                                                                                                                                    8.Ms.K. REVATHI https://in.docworkspace.com/d/sIFe4hYOQAoDrsLcG?sa=cl          \n                                                                                                                                                    9.Mrs.S. PRAVEENA https://in.docworkspace.com/d/sIBm4hYOQAqrrsLcG?sa=cl       \n                                                                                                                                                  10.Mrs.P. SUGANYA https://in.docworkspace.com/d/sIFS4hYOQArnrsLcG?sa=cl                                          \n                                                                                                                                                  11.Mr.R. RENGA NAYAGI https://in.docworkspace.com/d/sIIW4hYOQAtXrsLcG?sa=cl                                                                                                                                             \n                                                                                                                                                        They are the faculty of AIML in 2024-25. You can also check the faculty details by clicking the link next to their name."
     },
@@ -45,15 +41,14 @@ qa_data = [
         "questions": [
             "your name.",
             "what is your name.",
-            "tell me your name.",
-            "name"
+            "tell me your name."
         ],
         "answer": "My name is AK."
     },
     {
         "id": "bus_clg",
         "questions": [
-            "mvit bus",
+            "mvit fan",
             "buses in mvit clg",
             "buses in mvit",
             "mvit bus routes",
@@ -61,25 +56,9 @@ qa_data = [
             "manakula vinayagar institute of technology buses",
             "mvit bus details",
             "clg bus details",
-            "clg bus",
-            "bus details"
+            "clg bus"
         ],
-        "answer": "img:/static/images/bus_fees.jpeg"
-    },
-    {
-        "id": "bus image",
-        "questions": [
-            "mvit bus image",
-            "buses images mvit clg",
-            "buses pic in mvit",
-            "mvit bus pics",
-            "mvit bus pictures",
-            "manakula vinayagar institute of technology bus image",
-            "mvit bus pic",
-            "clg bus photo",
-            "clg photos"
-        ],
-        "answer": "img:/static/images/bus.jpeg"
+        "answer": "You can also track the location of the bus by using ( Ride map ) app which is available in play store. [but the student who not using the clg bus can't able to track it]"
     },
     {
         "id": "canteen",
@@ -117,10 +96,9 @@ qa_data = [
             "I want details about your collage",
             "I want details about my collage",
             "give some information about my collage",
-            "give some information about your collage",
-            "web"
+            "give some information about your collage"
         ],
-        "answer": "https://mvit.edu.in/<br> (you can visit our clg website)"
+        "answer": "https://mvit.edu.in/                                                                                                              (you can visit our clg website)"
     },
     {
         "id": "clg_location",
@@ -135,9 +113,7 @@ qa_data = [
             "collage location link",
             "collage location"
         ],
-        "answer": "Manakula vinayagar institute of technology was located in Madagadipet.<br>"
-        " ( you can also use the given link to find the exact location of our collage) <br>"
-        "https://maps.app.goo.gl/Z15uPr65jNhRfe117"
+        "answer": "Manakula vinayagar institute of technology was located in Madagadipet. ( you can also use the given link to find the exact location of our collage) https://maps.app.goo.gl/Z15uPr65jNhRfe117"
     },
     {
         "id": "computer_lab",
@@ -147,10 +123,9 @@ qa_data = [
             "cs lab in mvit clg",
             "computer lab in mvit",
             "photo of computer lab",
-            "images of cse lab",
-            "copmuter lab"
+            "images of cse lab"
         ],
-        "answer": "img:/static/images/computer_lab.jpeg"
+        "answer": "Answer not available"
     },
     {
         "id": "courses in our clg",
@@ -161,11 +136,7 @@ qa_data = [
             "courses in your clg.",
             "courses in your collage.",
             "what  are courses in your clg.",
-            "what  are courses in your collage.",
-            "deprtments",
-            "departments in our clg",
-            "what are the deparments are in mvit",
-            "dept"
+            "what  are courses in your collage."
         ],
         "answer": "I have only information about engineering branch. so the engineering courses offered by our collage in the year of 2024-25 are:                                                                                                 EEE.                                                                                                                                                                       ECE.                                                                                                                                                                           CSE.                                                                                                                                                                           IT.                                                                                                                                                               MECH.                                                                                                                                                     RA.                                                                                                                                                            FT.                                                                                                                                                         IOT.                                                                                                                                                                   AIML."
     },
@@ -201,7 +172,7 @@ qa_data = [
             "digital library in mvit pondicheery",
             "digital library"
         ],
-        "answer": "img:/static/images/digital_library.jpeg"
+        "answer": "Our Digital Library facilitates students and faculty members a modern digital learning approach with technically sophisticated environment to enhance their knowledge through e-journals &  e \u2013 books with unlimited access"
     },
     {
         "id": "eee_staff",
@@ -210,44 +181,44 @@ qa_data = [
             "EEE teachers",
             "eee professers",
             "eee staff",
-            "eee faculty",
-            "staff eee"
+            "eee faculty"
         ],
         "answer": "1.Dr.C. SHANMUGASUNDARAM https://in.docworkspace.com/d/sII24hYOQAsy3sLcG?sa=cl                                           \n                                                                                                                  2.Dr.K. SEDHURAMAN https://in.docworkspace.com/d/sIAK4hYOQAva3sLcG?sa=cl                                                                                                                                           \n                                                                                                                                                    3.Mr.S. RAJKUMAR https://in.docworkspace.com/d/sIOa4hYOQAo24sLcG?sa=cl         \n                                                                                                                                                     \n4.Mr.N. AMARABALAN https://in.docworkspace.com/d/sIFG4hYOQAru4sLcG?sa=cl    \n                                                                                                                                                    \n5.Mr.D. BALAJI https://in.docworkspace.com/d/sICO4hYOQAq_SsLcG?sa=cl             \n                                                                                                                                                    \n6.Mr. DMURUGANANDHAN https://in.docworkspace.com/d/sIMW4hYOQAr_SsLcG?sa=cl         \n                                                                                                                                                    7.Mrs.R. UMAMAHESWARI https://in.docworkspace.com/d/sIJW4hYOQAtDSsLcG?sa=cl                                                                                                                                           \n                                                                                                                                                   8.Mrs.S. SANTHALAKSHMY https://in.docworkspace.com/d/sIGW4hYOQAuDSsLcG?sa=cl                                     \n                                                                                                                                                   9.Mrs.R. MUTHUNAGAI https://in.docworkspace.com/d/sIF-4hYOQAvLSsLcG?sa=cl    \n                                                                                                                                                 10.Mrs.R. PRIYA https://in.docworkspace.com/d/sIAK4hYOQAoLTsLcG?sa=cl         \n                                                                                                                                                  11.Mrs.J. VIJAYA RAGHAVAN https://in.docworkspace.com/d/sIO-4hYOQApHTsLcG?sa=cl                                                                                                       \n                                                                                                                                                  12.Mr.S. VEERAMANIKANDAN https://in.docworkspace.com/d/sINS4hYOQArvTsLcG?sa=cl                                      \n                                                                                                                                                  13.Mr.P. TAMIZHARASAN https://in.docworkspace.com/d/sIH64hYOQAtDTsLcG?sa=cl                                                                                                                                    \n                                                                                                                                                  14.Mrs. SUVEDHA https://in.docworkspace.com/d/sIOq4hYOQAt7TsLcG?sa=cl         \n                                                                                                                                                        They are the faculty of EEE in 2024-25. You can also check the faculty details by clicking the link next to their name."
     },
     {
-        "id": "fees for AIML",
+        "id": "1st year fees for aiml",
         "questions": [
-            "artificial intelligence and machine learning fees",
-            "aiml fees",
-            "fees for AIML.",
-            "tell me the fees structure for AIML."
+            "artificial intelligence and machine learning fees for 1st year",
+            "first year aiml fees",
+            "1st fees for AIML.",
+            "fees for AIML"
+            "tell me the fees structure for AIML in first year"
         ],
-        "answer": "The fees structure for AIML  in 2025-26.for centac students is Rs:52,700 and for  management is Rs:81,500."
+        "answer": "The fees structure for AIML in 1st yeart in 2025-26.for centac students is Rs:52,700 and for  management is Rs:81,500."
     },
     {
-        "id": "fees for CSC.",
+        "id": "1st year fees for CSC.",
         "questions": [
-            "computer science and engineering fees",
-            "computer science fees",
-            "cse fees",
+            "1st year computer science and engineering fees",
+            "computer science fees for first year",
+            "cse fees fro 1st year",
             "fees for CSE.",
-            "tell me the fees structure for CSE."
+            "tell me the fees structure for CSE dept in 1st year"
         ],
-        "answer": "The fees structure for CSE in 2025-26.for centac students is Rs:62,700 and for management students is Rs:91,500"
+        "answer": "The fees structure for CSE in 1st year in 2025-26.for centac students is Rs:62,700 and for management students is Rs:91,500"
     },
     {
-        "id": "fees for ECE",
+        "id": "1st year fees for ECE",
         "questions": [
-            "electronics and communication engineering fees",
-            "ece fees",
-            "fess for ECE",
-            "tell me the fees structure for ECE."
+            "electronics and communication engineering fees for 1st year",
+            "1st year ece fees",
+            "fess details for ECE in mvit",
+            "tell me the first year fees structure for ECE."
         ],
-        "answer": "The fess structure for ECE in 2025-26.for centac students is Rs:62,700 and for management students is Rs:81,500."
+        "answer": "The fess structure for ECE in 1st year in 2025-26.for centac students is Rs:62,700 and for management students is Rs:81,500."
     },
     {
-        "id": "fees for FT",
+        "id": "1st year fees for FT",
         "questions": [
             "food technology fees",
             "ft fees",
@@ -264,7 +235,7 @@ qa_data = [
             "fees for IOT.",
             "tell me the fees structure for IOT."
         ],
-        "answer": "The fees structure IOT  for in 2025-26.for centac students is Rs:52,700 and for management students is Rs:81,500."
+        "answer": "The fees structure IOT  for in 2024-25.for centac students is Rs:52,700 and for management students is Rs:81,500."
     },
     {
         "id": "fees for IT",
@@ -274,7 +245,7 @@ qa_data = [
             "fees for IT.",
             "tell me the fees structure for IT."
         ],
-        "answer": "The fees structure for IT in 2025-26.for centac students is Rs:62,700 and for management students is Rs:91,500."
+        "answer": "The fees structure for IT in 2024-25.for centac students is Rs:62,700 and for management students is Rs:91,500."
     },
     {
         "id": "fees for MECH",
@@ -284,7 +255,7 @@ qa_data = [
             "fees for MECH.",
             "tell me the fees structure for \n MECH."
         ],
-        "answer": "The fees structure for MECH in 2025-26.for management students is Rs:52,700 and for centac students is Rs:52,700."
+        "answer": "The fees structure for MECH in 2024-25.for management students is Rs:52,700 and for centac students is Rs:52,700."
     },
     {
         "id": "fees for RA",
@@ -295,7 +266,7 @@ qa_data = [
             "fees for RA",
             "tell me the fees structure for \n RA."
         ],
-        "answer": "The fees structure for RA in 2025-26.for centac students is Rs:52,700 and for management students is Rs:71,500."
+        "answer": "The fees structure for RA in 2024-25.for centac students is Rs:52,700 and for management students is Rs:71,500."
     },
     {
         "id": "fess for EEE",
@@ -306,16 +277,16 @@ qa_data = [
             "fees structure for EEE.",
             "tell me the fees structure for EEE."
         ],
-        "answer": "The fess structure for EEE in 2025-26.for management students is Rs:52,700 and for centac students is Rs:52,700."
+        "answer": "The fess structure for EEE in 2024-25.for management students is Rs:52,700 and for centac students is Rs:52,700."
     },
     {
         "id": "FT_STAFF",
         "questions": [
-            "FT professors",
+            "ft professors",
             "ft techers",
             "ft mentors",
             "ft faculty",
-            "f t staff"
+            "ft staff"
         ],
         "answer": "1.Dr.D. Tiroutchelvame https://in.docworkspace.com/d/sICO4hYOQAsf5sLcG?sa=cl  \n                                                                                                                                                    2.Dr.S. Aruna https://in.docworkspace.com/d/sIEy4hYOQAvv5sLcG?sa=cl                  \n                                                                                                                                                    3.Dr.S. Santhalakshmy https://in.docworkspace.com/d/sICe4hYOQAor6sLcG?sa=cl   \n                                                                                                                                                    4.Dr.R. Baghya Nisha https://in.docworkspace.com/d/sILm4hYOQApj6sLcG?sa=cl                                        \n                                                                                                                                                    5.Er.R. Shailajha https://in.docworkspace.com/d/sIGi4hYOQAqn6sLcG?sa=cl            \n                                                                                                                                                    6.Er. Vimal,H https://in.docworkspace.com/d/sIKK4hYOQArr6sLcG?sa=cl                   \n                                                                                                                                                    7.Er.S. Indumathi https://in.docworkspace.com/d/sIG64hYOQAsb6sLcG?sa=cl                   \n                                                                                                                                                    8.Er.M .Nithyapriya (link is not available)                                                                              \n                                                                                                                                                     They are the faculty of FT in 2024-25. You can also check the faculty details by clicking the link next to their name."
     },
@@ -359,7 +330,7 @@ qa_data = [
         "id": "iot_staff",
         "questions": [
             "information of things faculty",
-            "IOT teachers",
+            "iot teachers",
             "iot mentors",
             "iot facultys",
             "iot professors",
@@ -376,7 +347,7 @@ qa_data = [
             "library in our clg",
             "library"
         ],
-        "answer": "our collage also have digital library"
+        "answer": "The College Central library has a collection of 17415 books, in different subjects like, Basic Sciences, Engineering & Technology and Management etc., Open access system is followed in the library. All the library transactions are computerized & Bar coded."
     },
     {
         "id": "mech_staff",
@@ -413,11 +384,9 @@ qa_data = [
             "I have some queries",
             "queries form",
             "queries section",
-            "where did i submit my queries",
-            "queries",
-            "complaint"
+            "where did i submit my queries"
         ],
-        "answer": "You can submit your queries by using the link <br> https://docs.google.com/forms/d/e/1FAIpQLSe5kYktZG884dUGs7As2CxX240i5yq9O4pBoL4n6sJYITlRTA/viewform?usp=sf_link"
+        "answer": "You can submit your queries by using the link https://docs.google.com/forms/d/e/1FAIpQLSe5kYktZG884dUGs7As2CxX240i5yq9O4pBoL4n6sJYITlRTA/viewform?usp=sf_link"
     },
     {
         "id": "robotics_staff",
@@ -456,7 +425,7 @@ qa_data = [
             "how many seat alloted for cse",
             "cse seats"
         ],
-        "answer": "no of seats for computer science engineering in B.TECH in 2025 is... [240] and in M.TECH is ...[12]"
+        "answer": "no of seats for computer science engineering in B.TECH in 2024 is... [240] and in M.TECH is ...[12]"
     },
     {
         "id": "seats_for_ece",
@@ -469,7 +438,7 @@ qa_data = [
             "how many seat alloted for ece",
             "ece seats"
         ],
-        "answer": "no of seats for electronics and communication engineering  in B.TECH in 2025 is... [180] and in M.TECH is...[12]"
+        "answer": "no of seats for electronics and communication engineering  in B.TECH in 2024 is... [180] and in M.TECH is...[12]"
     },
     {
         "id": "seats_for_FT",
@@ -481,7 +450,7 @@ qa_data = [
             "how many seats are there for ft",
             "how many seat alloted for ft"
         ],
-        "answer": "no of seats for food technology  in 2025 is... [60]"
+        "answer": "no of seats for food technology  in 2024 is... [60]"
     },
     {
         "id": "seats_for_Iot",
@@ -493,7 +462,7 @@ qa_data = [
             "how many seats are there for iot",
             "how many seat alloted for iot"
         ],
-        "answer": "no of seats for information of things in 2025 is... [60]"
+        "answer": "no of seats for information of things in 2024 is... [60]"
     },
     {
         "id": "seats_for_MECH",
@@ -507,7 +476,7 @@ qa_data = [
             "how many seat alloted for mech",
             "mech seats"
         ],
-        "answer": "no of seats for mechanical engineering in 2025 is... [60]"
+        "answer": "no of seats for mechanical engineering in 2024 is... [60]"
     },
     {
         "id": "seats_for_robotics",
@@ -518,7 +487,7 @@ qa_data = [
             "how many seats are there for RA",
             "how many seat alloted for RA"
         ],
-        "answer": "no of seats for robotics in 2025 is... [60]"
+        "answer": "no of seats for robotics in 2024 is... [60]"
     },
     {
         "id": "seat_for_aiml",
@@ -531,7 +500,7 @@ qa_data = [
             "seat for aiml in mit",
             "seat for aiml"
         ],
-        "answer": "no of seats for artificial and machine learning in 2025 is... [180]"
+        "answer": "no of seats for artificial and machine learning in 2024 is... [180]"
     },
     {
         "id": "seat_for_eee",
@@ -545,7 +514,7 @@ qa_data = [
             "how many seat alloted for eee",
             "eee seats"
         ],
-        "answer": "no of seats for electrical and electronics engineering in 2025 is... [60]"
+        "answer": "no of seats for electrical and electronics engineering in 2024 is... [60]"
     },
     {
         "id": "seat_for_IT",
@@ -558,7 +527,7 @@ qa_data = [
             "how many seat alloted for it",
             "it seats"
         ],
-        "answer": "no of seats for information technology in 2025 is... [120]"
+        "answer": "no of seats for information technology in 2024 is... [120]"
     },
     {
         "id": "sports",
@@ -634,516 +603,114 @@ qa_data = [
             "vision and mission of the manakula vinayagar institute of technology collage",
             "vision and mission of the mvit collage"
         ],
-        "answer": "img:/static/images/vision.jpeg"
+        "answer": "The vision and mission of the clg is given below"
     },
     {
-        "id": "College Building Image",
+        "id": "how are you",
         "questions": [
-            "college building image",
-            "mvit building photo",
-            "photo of college",
-            "clg pic",
-            "campus building picture"
-            "college",
-            "collage",
-            "images of a clg"
+            "how are you",
+            "hwo are you",
+            "how aer you",
+            "how are yuo"
         ],
-        "answer": "img:/static/images/college.jpeg"
+        "answer": "I am Good"
     },
     {
-        "id": "Hostel Image",
+        "id": "work",
         "questions": [
-            "hostel image",
-            "clg hostel photo",
-            "show me hostel picture",
-            "mvit hostel pic",
-            "hostel",
-            "hostal",
-            "hostel in mvit",
-            "boys hostel",
-            "girls hostel"
+            "what can you do",
+            "what is your work",
+            "waht is work",
+            "tell me about your nwork",
+            "tell me about your work",
+            "what are you doing"
         ],
-        "answer": "img:/static/images/hostal.jpeg" 
+        "answer": "I give information about MVIT clg"
     },
     {
-        "id": "Sports Ground Image",
+        "id": "doing",
         "questions": [
-            "sports ground image",
-            "playground photo",
-            "mvit sports pic",
-            "clg ground picture"
+            "how are you doing",
+            "how are you"
         ],
-        "answer": "img:/static/images/sports.jpg"  
+        "answer": "I am doing Good"
     },
-    {
-        "id": "user intraction",
-        "questions": [
-            "mvit bot",
-            "he bot",
-            "chat bot",
-            "MVIT bot",
-            "mit bot"
-        ],
-        "answer": "yeah,Tell me, How can I hell you?"
-    },
-    {
-        "id": "boys Hostel",
-        "questions": [
-            "boys hostel image",
-            "boys hostel photo",
-            "show me hostel picture of boy",
-            "mvit boys hostel pic",
-            "boys hostel",
-            "boys hostal",
-            "boys hostel in mvit",
-            "boys hostel",
-            "boys hostel"
-        ],
-        "answer": "img:/static/images/boys_hostel.jpeg" 
-    },
-    {
-        "id": "girls Hostel",
-        "questions": [
-            "girls hostel image",
-            "girls hostel photo",
-            "show me hostel picture of girls",
-            "mvit girls hostel pic",
-            "girl hostel",
-            "girls hostal",
-            "girl hostel in mvit",
-            "girl hostel",
-            "girls hostel"
-        ],
-        "answer": "img:/static/images/hostal.jpeg" 
-    },
-    {
-        "id": "PET ground",
-        "questions": [
-            "mvit pt ground",
-            "mit pet ground",
-            "MVIT p.e.t ground",
-            "sports ground in mvit",
-            "sports place",
-            "ground"
-        ],
-        "answer": "img:/static/images/pet_ground.jpeg"
-    },
-    {
-        "id": "volleyball ground",
-        "questions": [
-            "mvit volleyball ground",
-            "mit volley ball ground",
-            "MVIT volley ball ground",
-            "volley ground in mvit",
-            "volley ball place",
-            "volleyball ground",
-            "volleyball",
-            "volley ball"
-        ],
-        "answer": "img:/static/images/volleyball_ground.jpeg"
-    },
-    {
-        "id": "basketball ground",
-        "questions": [
-            "mvit Basketball ground",
-            "mit basket ground",
-            "MVIT basket_ball ground",
-            "basket ground in mvit",
-            "basket ball place",
-            "basketball ground",
-            "basketball",
-            "basket ball"
-        ],
-        "answer": "img:/static/images/basketball_ground.jpeg"
-    },
-    {
-        "id": "companies",
-        "questions": [
-            "no of companies in mvit clg",
-            "number of company are there in mit",
-            "how many companies are in mvit",
-            "companies",
-            "no of company"
-        ],
-        "answer": "MVIT has tie up with 50+ companies"
-    },
-    {
-        "id": "companies",
-        "questions": [
-            "what are the companies in mvit",
-            "company collab with mit",
-            "some company tie up with mvit",
-            "what company are partnership with mvit",
-            "name the company collabrated with MVIT",
-            "comapanies names",
-            "company name",
-            "name of the company",
-            "what are the company in mvit"
-        ],
-        "answer": "Google,<br> Microsoft,<br> TCS,<br> Virtusa,<br> Zoho etc"
-    },
-    {
-        "id": "no of students",
-        "questions": [
-            "no of students in mvit",
-            "number of students studying in mvit",
-            "total of students in mvit",
-            "how many students are there in mvit",
-            "mit students",
-            "total no of students in mit"
-        ],
-        "answer": "MVIT currently has 3000+ students"
-    },
-    {
-        "id":"no of labs",
-        "questions": [
-            "no of labs in mvit",
-            "number of lab in mvit",
-            "total of labs in mvit",
-            "how many Lab are there in mvit",
-            "mit LABS",
-            "total no of labs in mit"
-        ],
-        "answer": "MVIT has Total 11 labs"
-    },
-    {
-        "id":"principal",
-        "questions": [
-            "principal",
-            "principle of mvit",
-            "principal of mit",
-            "who is the principal of mvit",
-            "tell me the name of the principal",
-            "mvit principal"
-        ],
-        "answer": "Dr.S.Malarkkan is our collage Principal"
-    },
-    {
-        "id":"trustee",
-        "questions": [
-            "trustee",
-            "trustee of mvit",
-            "truste of mit",
-            "who is the trustee of mvit",
-            "tell me the name of the trustee",
-            "mvit trustree"
-        ],
-        "answer": "Mrs.V.Nirmala<br> Mrs.D.Geetha<br> They are the trustee of our college"
-    },
-    {
-        "id":"vice chairperson",
-        "questions": [
-            "vice chairperson",
-            "vice charperson of mvit",
-            "vice charperson",
-            "who is the vice chairperson of mvit",
-            "tell me the name of the vicecharperson",
-            "mvit vicechairperson",
-            "vicechairperson"
-        ],
-        "answer": " Mrs.K.Nalini is the vice chairperson of our collage"
-    },
-    {
-        "id":"secretary",
-        "questions": [
-            "secretary",
-            "secretary of mvit",
-            "secretary",
-            "who is the secretary of mvit",
-            "tell me the name of the secretary",
-            "mvit secretary",
-            "secretary"
-        ],
-        "answer": " Mrs.K.Nalini is the vice chairperson of our collage"
-    },
-    {
-        "id":"secretary",
-        "questions": [
-            "secretary",
-            "secretary of mvit",
-            "secretary",
-            "who is the secretary of mvit",
-            "tell me the name of the secretary",
-            "mvit secretary",
-            "secretary"
-        ],
-        "answer": " Mrs.K.Nalini is the vice chairperson of our collage"
-    },
-    {
-        "id":"secretary",
-        "questions": [
-            "secretary",
-            "secretary of mvit",
-            "secretary",
-            "who is the secretary of mvit",
-            "tell me the name of the secretary",
-            "mvit secretary",
-            "secretary"
-        ],
-        "answer": " Mrs.K.Nalini is the vice chairperson of our collage"
-    },
-    {
-        "id":"Treasurer",
-        "questions": [
-            "Treasurer",
-            "treasurer of mvit",
-            "treasurer",
-            "who is the treasurer of mvit",
-            "tell me the name of the treasurer",
-            "mvit treasurer",
-            "treasurer"
-        ],
-        "answer": "Shri.S.V. Sugamaran is the vice Treasurer of our collage"
-    },
-    {
-        "id":"chairman",
-        "questions": [
-            "chairman",
-            "chairman of mvit",
-            "Chairman",
-            "who is the Chairman of mvit",
-            "tell me the name of the chairman",
-            "mvit CHAIRMAIN",
-            "Chairman"
-        ],
-        "answer": "M. Dhanasekaran is the Chairman of our collage"
-    },
-    {
-        "id":"founder",
-        "questions": [
-            "founder",
-            "founder of mvit",
-            "founder",
-            "who is the founder of mvit",
-            "tell me the name of the founder",
-            "mvit FOUNDER",
-            "founder"
-        ],
-        "answer": "N.Kesavan is the Founder of our collage"
-    },
-    {
-        "id": "creator",
-        "questions": [
-            "who created you",
-            "creator",
-            "creater",
-            "who makes you",
-            "who is your boss",
-            "who makes you",
-            "maker",
-            "give creater name",
-            "name of the creator",
-            "your owner",
-            "woned by who",
-            "who woned you"
-        ],
-        "answer": "Mr.R.Avinash is my creator"
-    },
-    {
-        "id": "purpose",
-        "questions": [
-            "purpose",
-            "what purpose do you created",
-            "what is your purpose",
-            "tell me your features",
-            "what is your feature",
-            "purpose of mvit chatbot",
-            "purpose of ak chatbot",
-            "narrow chatbot purpose",
-            "purpose of narrow chatbot",
-            "purpose of you",
-            "purpose of the chatbot",
-            "why you made",
-            "why you make"
-        ],
-        "answer": "I’m a fast, I understand and generate clear responses on many topics and available 24/7, Multiple user can easily access me at same time, turn complex search into simple input, so you save time and get practical answers quickly."
-    },
-    {
-        "id": "placement percentage",
-        "questions": [
-            "How many students are graduated in mvit",
-            "graduation percrntage in mvit"
-            "no of placed percentage in mvit",
-            "placement percentage",
-            "percentage of placed students",
-            "How many students are placement in mvit",
-            "what is percentage of placement in mvit",
-            "mvit placements",
-            "placement record",
-            "placement record in mvit",
-            "placement"
-        ],
-        "answer": "Manakula vinayagar Institute of Technology has 90% placement records "
-    },
-    {
-        "id": "contact number",
-        "questions": [
-            "phone number",
-            "contact details",
-            "contact information",
-            "mvit phonenumber",
-            "mit mobile number",
-            "mit mail id",
-            "mail",
-            "mail id",
-            "mail information",
-            "give mail id and phone number",
-            "give phone number and mail id",
-            "how can we contact you",
-            "phone",
-            "contact"
-        ],
-        "answer": "You can contact MVIT through <br> Phone- 0413-2643007, <br> 9498093535 <br> Mail- principal@mvit.edu.in"
-    },
-    {
-        "id":"events",
-        "questions": [
-            "events in mvit",
-            "events",
-            "what are the events in mvit",
-            "events conducted in mvit",
-            "elan 2025",
-            "programs",
-            "programs in mvit clg",
-            "elan"
-        ],
-        "answer": "img:/static/images/elan_event.jpeg"
-    },
-    {
-        "id": "no of computer",
-        "questions":[
-            "number of computer are there in mvit",
-            "how many system are in mvit",
-            "no of system in mvit",
-            "systems in mvit",
-            "how many desktop are in mvit labs",
-            "how much computer used for work in mvit",
-            "computers in mvit"
-        ],
-        "answer":"Mvit has 558 computers"
-    },
-    {
-        "id": "no of server",
-        "questions":[
-            "number of servers are there in mvit",
-            "servers",
-            "total servers in mvit",
-            "Total servers"
-        ],
-        "answer":"Mvit has 6 servers"
-    },
-    {
-        "id": "network",
-        "questions":[
-            "network used",
-            "network",
-            "internet in mvit",
-            "which network is used in mvit"
-        ],
-        "answer":"Mvit has BSNL internet service"
-    },
-    {
-        "id": "cells",
-        "questions":[
-            "cells in mvit",
-            "cells",
-            "cell",
-            "committes in mvit",
-            "what are the cells are in mvit",
-            "cells of mvit",
-            "what are the committe are in mvit",
-            "committe of mvit",
-            "committe",
-            "committes"
-        ],
-        "answer":"1.Academic Planning committee <br>"
-                 "2.Quality Assessment Committee (QAC) <br>"
-                 "3.Academic Audit committee <br>"
-                 "4.Budget and finance committee <br>"
-                 "5.College News Letter, Magazine, Prospectus committee <br>"
-                 "6.Sports committee <br>"
-                 "7.Cultural committee <br>"
-                 "8.Anti-ragging committee <br>"
-                 "9.Grievances Redressal committee <br>"
-                 "10.Transport committee <br>"
-                "11.Discipline Committee <br>"
-                "12.Mentoring Committee and counseling <br>"
-                "13.Purchase committee <br>"
-                "14.Infrastructure Management / Time table committee <br>"
-                "15.HoDs committee <br>"
-                "16.Hods sub committee <br>"
-                "17.Canteen committee <br>"
-                "18.Hostel committee <br>"
-                "19.Code of Conduct Committee <br> These are the committes/cells of MVIT."
-    },
-    {
-       "id": "no of cells",
-        "questions":[
-            " no ofcells in mvit",
-            "how many cells are in mvit",
-            "total no of cells",
-            "no of committes in mvit",
-            "total no of committee are in mvit",
-        ],
-        "answer":"No of cells/committee in MVIT is 19" 
-    },
-    {
-        "id": "link",
-        "questions":[
-            "link",
-            "give me the link",
-            "i want link",
-            "send the link"
-        ],
-        "answer": "https://mvit.edu.in/<br> (you can visit our clg website)"
-    }
-
 ]
 
-# -------------------- PREPROCESS --------------------
-question_to_answer = {}
-all_questions = []
+HTML_TEMPLATE = '''
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MVIT Chatbot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        #chatbox { max-width: 800px; margin: 50px auto; padding: 30px; background: #ffffff; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .message { margin: 10px 0; }
+        .user { text-align: right; color: #0d6efd; }
+        .bot { text-align: left; color: #198754; }
+        .bubble { padding: 10px 15px; border-radius: 15px; display: inline-block; max-width: 80%; }
+        .user .bubble { background: #e7f1ff; }
+        .bot .bubble { background: #e9fbe9; }
+    </style>
+</head>
+<body>
+    <div id="chatbox" class="container">
+        <h3 class="text-center mb-4">🎓 MVIT Chatbot</h3>
+        <div id="chatlog" class="mb-3"></div>
+        <div class="input-group">
+            <input type="text" id="user_input" class="form-control" placeholder="Ask something...">
+            <button class="btn btn-primary" onclick="send()">Send</button>
+        </div>
+    </div>
 
-for entry in qa_data:
-    for q in entry["questions"]:
-        ql = q.lower().strip()
-        question_to_answer[ql] = entry["answer"]
-        all_questions.append(ql)
+    <script>
+        function send() {
+            let input = document.getElementById("user_input");
+            let msg = input.value.trim();
+            if (!msg) return;
 
-spell = SpellChecker()
+            let chatlog = document.getElementById("chatlog");
+            chatlog.innerHTML += "<div class='message user'><div class='bubble'>" + msg + "</div></div>";
 
-def find_best_match(user_input):
-    ui = (user_input or "").lower().strip()
-    if not ui:
-        return "Please type a question."
-    if ui in question_to_answer:
-        return question_to_answer[ui]
-    match = difflib.get_close_matches(ui, all_questions, n=1, cutoff=0.70)
-    if match:
-        return question_to_answer[match[0]]
-    return "Answer not available."
+            fetch("/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message: msg })
+            })
+            .then(res => res.json())
+            .then(data => {
+                chatlog.innerHTML += "<div class='message bot'><div class='bubble'>" + data.reply + "</div></div>";
+                input.value = "";
+                chatlog.scrollTop = chatlog.scrollHeight;
+            });
+        }
 
-# -------------------- ROUTES --------------------
+        document.getElementById("user_input").addEventListener("keypress", function(e) {
+            if (e.key === "Enter") send();
+        });
+    </script>
+</body>
+</html>
+'''
+
+def find_answer(user_input):
+    user_input = user_input.lower()
+    for item in qa_data:
+        for q in item["questions"]:
+            if user_input in q.lower():
+                return item["answer"]
+    return "Sorry, I don't have an answer for that."
+
 @app.route('/')
-def index():
-    return render_template('index.html')
+def home():
+    return render_template_string(HTML_TEMPLATE)
 
-@app.route('/get', methods=['POST'])
-def get_bot_response():
-    data = request.get_json(force=True) or {}
-    user_message = data.get('msg', '')
-
-    words = user_message.lower().split()
-    corrected_words = [spell.correction(word) for word in words]
-    corrected_text = " ".join(corrected_words)
-
-    reply = find_best_match(corrected_text)
-
-    # If reply is an image path, return image in response
-    if reply.startswith("/static/"):
-        return jsonify({"reply": "Here is the picture you asked for:", "image": reply})
-    else:
-        return jsonify({"reply": reply, "image": None})
+@app.route('/chat', methods=['POST'])
+def chat():
+    message = request.json.get("message", "")
+    reply = find_answer(message)
+    return jsonify({"reply": reply})
 
 if __name__ == '__main__':
     app.run(debug=True)
