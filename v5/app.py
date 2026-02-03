@@ -1,87 +1,13 @@
 from flask import Flask, request, jsonify, render_template
 import difflib
+from spellchecker import SpellChecker
+
 app = Flask(__name__)
 
 # -------------------- Q&A DATA --------------------
+
 qa_data = [
-    {
-        "id": "Sports Ground Image",
-        "questions": [
-            "sports ground image",
-            "playground photo",
-            "mvit sports pic",
-            "clg ground picture"
-        ],
-        "answer": "Here are some pictures of the MVIT sports ground:",
-        "images": [
-            {"src": "/static/images/sports1.jpg", "caption": "Main cricket ground of MVIT."},
-            {"src": "/static/images/sports2.jpg", "caption": "Football ground with running track."},
-            {"src": "/static/images/sports3.jpg", "caption": "Students playing volleyball."}
-        ]
-    },
-    {
-        "id": "College Building",
-        "questions": [
-            "college building image",
-            "mvit building photo",
-            "campus picture"
-        ],
-        "answer": "This is our MVIT college building:",
-        "images": [
-            {"src": "/static/images/building1.jpg", "caption": "Front view of the main building."},
-            {"src": "/static/images/building2.jpg", "caption": "Inside view of the campus."}
-        ]
-    },
-    {
-        "id": "Library",
-        "questions": [
-            "library photo",
-            "mvit library",
-            "college library image"
-        ],
-        "answer": "Our library has a wide collection of books:",
-        "images": [
-            {"src": "/static/images/library1.jpg", "caption": "Students reading inside the library."},
-            {"src": "/static/images/library2.jpg", "caption": "Digital section with computers."}
-        ]
-    },
-    {
-        "id": "Sports Ground Images",
-        "questions": [
-            "sports ground image",
-            "playground photo",
-            "mvit sports pic",
-            "clg ground picture",
-            "sports ground multiple"
-        ],
-        "answer": {
-            "reply": "Here are some views of the MVIT Sports Ground 🏟️:",
-            "images": [
-                {
-                    "src": "/static/images/sports1.jpg",
-                    "caption": "🏀 Basketball & Volleyball Court"
-                },
-                {
-                    "src": "/static/images/sports2.jpg",
-                    "caption": "⚽ Football & Cricket Ground"
-                },
-                {
-                    "src": "/static/images/sports3.jpg",
-                    "caption": "🏃 Athletics Track"
-                }
-            ]
-        }
-    },
-    {
-        "id": "Library Info",
-        "questions": [
-            "library",
-            "college library",
-            "mvit library"
-        ],
-        "answer": "The MVIT Library has a vast collection of academic books, journals, and digital resources."
-    },
-    {
+        {
         "id": "Admission in collage.",
         "questions": [
             "admission in mvit clg",
@@ -110,18 +36,7 @@ qa_data = [
             "aiml staff",
             "aiml faculty"
         ],
-        "answer": '''1.Mr.R. Raj Bharath https://ibb.co/HtK7Hwy 
-        2.Mrs.K. ANUPRIYA https://www.google.com/url?q=http%3A%2F%2Faiml_staff&sa=D <br>
-        3.Mrs.S.K SUGUNEDHAM https://in.docworkspace.com/d/sIA64hYOQAprqsLcG?sa=cl <br>
-        4.Mrs.S. CHITRA https://in.docworkspace.com/d/sIAm4hYOQArTqsLcG?sa=cl <br>
-        5.Mr.A. JAINULLABEEN https://in.docworkspace.com/d/sIJC4hYOQAsfqsLcG?sa=cl <br>
-        6.Mrs.S. LAVANYA https://in.docworkspace.com/d/sIKC4hYOQAt7qsLcG?sa=cl <br>
-        7.Ms.V. NIRIMATHI https://in.docworkspace.com/d/sIPO4hYOQAvDqsLcG?sa=cl <br>
-        8.Ms.K. REVATHI https://in.docworkspace.com/d/sIFe4hYOQAoDrsLcG?sa=cl <br>
-        9.Mrs.S. PRAVEENA https://in.docworkspace.com/d/sIBm4hYOQAqrrsLcG?sa=cl <br>
-        10.Mrs.P. SUGANYA https://in.docworkspace.com/d/sIFS4hYOQArnrsLcG?sa=cl <br>
-        11.Mr.R. RENGA NAYAGI https://in.docworkspace.com/d/sIIW4hYOQAtXrsLcG?sa=cl <br>
-        They are the faculty of AIML in 2024-25. You can also check the faculty details by clicking the link next to their name.'''
+        "answer": "1.Mr.R. Raj Bharath https://ibb.co/HtK7Hwy \n2.Mrs.K. ANUPRIYA https://www.google.com/url?q=http%3A%2F%2Faiml_staff&sa=D \n3.Mrs.S.K SUGUNEDHAM https://in.docworkspace.com/d/sIA64hYOQAprqsLcG?sa=cl \n4.Mrs.S. CHITRA https://in.docworkspace.com/d/sIAm4hYOQArTqsLcG?sa=cl \n5.Mr.A. JAINULLABEEN https://in.docworkspace.com/d/sIJC4hYOQAsfqsLcG?sa=cl \n6.Mrs.S. LAVANYA https://in.docworkspace.com/d/sIKC4hYOQAt7qsLcG?sa=cl \n7.Ms.V. NIRIMATHI https://in.docworkspace.com/d/sIPO4hYOQAvDqsLcG?sa=cl \n8.Ms.K. REVATHI https://in.docworkspace.com/d/sIFe4hYOQAoDrsLcG?sa=cl \n9.Mrs.S. PRAVEENA https://in.docworkspace.com/d/sIBm4hYOQAqrrsLcG?sa=cl \n10.Mrs.P. SUGANYA https://in.docworkspace.com/d/sIFS4hYOQArnrsLcG?sa=cl \n11.Mr.R. RENGA NAYAGI https://in.docworkspace.com/d/sIIW4hYOQAtXrsLcG?sa=cl \nThey are the faculty of AIML in 2024-25. You can also check the faculty details by clicking the link next to their name."
     },
     {
         "id": "Bot name.",
@@ -264,14 +179,13 @@ qa_data = [
     {
         "id": "eee_staff",
         "questions": [
-            "EEE teachers"
-            ,
+            "aiml mentors",
+            "EEE teachers",
             "eee professers",
             "eee staff",
-            "eee faculty",
-            "staff eee"
+            "eee faculty"
         ],
-        "answer": "1.Dr.C. SHANMUGASUNDARAM https://in.docworkspace.com/d/sII24hYOQAsy3sLcG?sa=cl <br>2.Dr.K. SEDHURAMAN https://in.docworkspace.com/d/sIAK4hYOQAva3sLcG?sa=cl <br>3.Mr.S. RAJKUMAR https://in.docworkspace.com/d/sIOa4hYOQAo24sLcG?sa=cl <br>4.Mr.N. AMARABALAN https://in.docworkspace.com/d/sIFG4hYOQAru4sLcG?sa=cl <br>5.Mr.D. BALAJI https://in.docworkspace.com/d/sICO4hYOQAq_SsLcG?sa=cl <br>6.Mr. DMURUGANANDHAN https://in.docworkspace.com/d/sIMW4hYOQAr_SsLcG?sa=cl <br>7.Mrs.R. UMAMAHESWARI https://in.docworkspace.com/d/sIJW4hYOQAtDSsLcG?sa=cl <br>8.Mrs.S. SANTHALAKSHMY https://in.docworkspace.com/d/sIGW4hYOQAuDSsLcG?sa=cl <br>9.Mrs.R. MUTHUNAGAI https://in.docworkspace.com/d/sIF-4hYOQAvLSsLcG?sa=cl <br>10.Mrs.R. PRIYA https://in.docworkspace.com/d/sIAK4hYOQAoLTsLcG?sa=cl <br>11.Mrs.J. VIJAYA RAGHAVAN https://in.docworkspace.com/d/sIO-4hYOQApHTsLcG?sa=cl <br>12.Mr.S. VEERAMANIKANDAN https://in.docworkspace.com/d/sINS4hYOQArvTsLcG?sa=cl <br>13.Mr.P. TAMIZHARASAN https://in.docworkspace.com/d/sIH64hYOQAtDTsLcG?sa=cl <br>14.Mrs. SUVEDHA https://in.docworkspace.com/d/sIOq4hYOQAt7TsLcG?sa=cl <br>They are the faculty of EEE in 2024-25. You can also check the faculty details by clicking the link next to their name."
+        "answer": "1.Dr.C. SHANMUGASUNDARAM https://in.docworkspace.com/d/sII24hYOQAsy3sLcG?sa=cl \n2.Dr.K. SEDHURAMAN https://in.docworkspace.com/d/sIAK4hYOQAva3sLcG?sa=cl \n3.Mr.S. RAJKUMAR https://in.docworkspace.com/d/sIOa4hYOQAo24sLcG?sa=cl \n4.Mr.N. AMARABALAN https://in.docworkspace.com/d/sIFG4hYOQAru4sLcG?sa=cl \n5.Mr.D. BALAJI https://in.docworkspace.com/d/sICO4hYOQAq_SsLcG?sa=cl \n6.Mr. DMURUGANANDHAN https://in.docworkspace.com/d/sIMW4hYOQAr_SsLcG?sa=cl \n7.Mrs.R. UMAMAHESWARI https://in.docworkspace.com/d/sIJW4hYOQAtDSsLcG?sa=cl \n8.Mrs.S. SANTHALAKSHMY https://in.docworkspace.com/d/sIGW4hYOQAuDSsLcG?sa=cl \n9.Mrs.R. MUTHUNAGAI https://in.docworkspace.com/d/sIF-4hYOQAvLSsLcG?sa=cl \n10.Mrs.R. PRIYA https://in.docworkspace.com/d/sIAK4hYOQAoLTsLcG?sa=cl \n11.Mrs.J. VIJAYA RAGHAVAN https://in.docworkspace.com/d/sIO-4hYOQApHTsLcG?sa=cl \n12.Mr.S. VEERAMANIKANDAN https://in.docworkspace.com/d/sINS4hYOQArvTsLcG?sa=cl \n13.Mr.P. TAMIZHARASAN https://in.docworkspace.com/d/sIH64hYOQAtDTsLcG?sa=cl \n14.Mrs. SUVEDHA https://in.docworkspace.com/d/sIOq4hYOQAt7TsLcG?sa=cl \nThey are the faculty of EEE in 2024-25. You can also check the faculty details by clicking the link next to their name."
     },
     {
         "id": "fees for AIML",
@@ -340,7 +254,7 @@ qa_data = [
             "mechanical engineering fees",
             "mech fees",
             "fees for MECH.",
-            "tell me the fees structure for <br> MECH."
+            "tell me the fees structure for \n MECH."
         ],
         "answer": "The fees structure for MECH in 2024-25.for management students is Rs:52,700 and for centac students is Rs:52,700."
     },
@@ -351,7 +265,7 @@ qa_data = [
             "robotics fees",
             "fees for robotics",
             "fees for RA",
-            "tell me the fees structure for <br> RA."
+            "tell me the fees structure for \n RA."
         ],
         "answer": "The fees structure for RA in 2024-25.for centac students is Rs:52,700 and for management students is Rs:71,500."
     },
@@ -375,7 +289,7 @@ qa_data = [
             "ft faculty",
             "ft staff"
         ],
-        "answer": "1.Dr.D. Tiroutchelvame https://in.docworkspace.com/d/sICO4hYOQAsf5sLcG?sa=cl  <br>2.Dr.S. Aruna https://in.docworkspace.com/d/sIEy4hYOQAvv5sLcG?sa=cl                  <br>                                                                                                                                                    3.Dr.S. Santhalakshmy https://in.docworkspace.com/d/sICe4hYOQAor6sLcG?sa=cl   <br>                                                                                                                                                    4.Dr.R. Baghya Nisha https://in.docworkspace.com/d/sILm4hYOQApj6sLcG?sa=cl                                        <br>                                                                                                                                                    5.Er.R. Shailajha https://in.docworkspace.com/d/sIGi4hYOQAqn6sLcG?sa=cl            <br>                                                                                                                                                    6.Er. Vimal,H https://in.docworkspace.com/d/sIKK4hYOQArr6sLcG?sa=cl                   <br>                                                                                                                                                    7.Er.S. Indumathi https://in.docworkspace.com/d/sIG64hYOQAsb6sLcG?sa=cl                   <br>                                                                                                                                                    8.Er.M .Nithyapriya (link is not available)                                                                              <br>                                                                                                                                                     They are the faculty of FT in 2024-25. You can also check the faculty details by clicking the link next to their name."
+        "answer": "1.Dr.D. Tiroutchelvame https://in.docworkspace.com/d/sICO4hYOQAsf5sLcG?sa=cl  \n2.Dr.S. Aruna https://in.docworkspace.com/d/sIEy4hYOQAvv5sLcG?sa=cl                  \n                                                                                                                                                    3.Dr.S. Santhalakshmy https://in.docworkspace.com/d/sICe4hYOQAor6sLcG?sa=cl   \n                                                                                                                                                    4.Dr.R. Baghya Nisha https://in.docworkspace.com/d/sILm4hYOQApj6sLcG?sa=cl                                        \n                                                                                                                                                    5.Er.R. Shailajha https://in.docworkspace.com/d/sIGi4hYOQAqn6sLcG?sa=cl            \n                                                                                                                                                    6.Er. Vimal,H https://in.docworkspace.com/d/sIKK4hYOQArr6sLcG?sa=cl                   \n                                                                                                                                                    7.Er.S. Indumathi https://in.docworkspace.com/d/sIG64hYOQAsb6sLcG?sa=cl                   \n                                                                                                                                                    8.Er.M .Nithyapriya (link is not available)                                                                              \n                                                                                                                                                     They are the faculty of FT in 2024-25. You can also check the faculty details by clicking the link next to their name."
     },
     {
         "id": "good afternoon",
@@ -423,7 +337,7 @@ qa_data = [
             "iot professors",
             "iot staffs"
         ],
-        "answer": "1.Dr.N. PALANIVEL ( Link is not available )     <br>                                                                                                                                                    2.Mrs.V.SUGANYA ( Link is not available )                                                                                                                                            <br>                                                                                                                                                      3.Mr.V.KUMARAGURU https://in.docworkspace.com/d/sIPC4hYOQArX1urcG?sa=cl         <br>                                                                                                                                                    4.Mrs.K.C NITHYASREE https://in.docworkspace.com/d/sIFe4hYOQAv71urcG?sa=cl                    <br>                                                                                                                                                    5.Mr.G.KEERTHIRAAJ ( Link is not available )                                                                                                           <br>                                                                                                                                                    6.Ms.S.ADOLPHINE SHYNI https://in.docworkspace.com/d/sICu4hYOQAov2urcG?sa=cl                                                                                                                                           <br>                                                                                                                                                    7.Mrs.K.KAVITHA https://in.docworkspace.com/d/sIAG4hYOQApj2urcG?sa=cl         <br>                                                                                                                                                    <br> 8.Ms.A.SHEERIN https://in.docworkspace.com/d/sIKC4hYOQAqT2urcG?sa=cl            <br>                                                                                                                                                    9.Mr.U.MURUGANANTHAM ( Link is not available )                                                                                    <br>                                                                                                                                                    They are the faculty of IOT in 2024-25. You can also check the faculty details by clicking the link next to their name."
+        "answer": "1.Dr.N. PALANIVEL ( Link is not available )     \n                                                                                                                                                    2.Mrs.V.SUGANYA ( Link is not available )                                                                                                                                            \n                                                                                                                                                      3.Mr.V.KUMARAGURU https://in.docworkspace.com/d/sIPC4hYOQArX1urcG?sa=cl         \n                                                                                                                                                    4.Mrs.K.C NITHYASREE https://in.docworkspace.com/d/sIFe4hYOQAv71urcG?sa=cl                    \n                                                                                                                                                    5.Mr.G.KEERTHIRAAJ ( Link is not available )                                                                                                           \n                                                                                                                                                    6.Ms.S.ADOLPHINE SHYNI https://in.docworkspace.com/d/sICu4hYOQAov2urcG?sa=cl                                                                                                                                           \n                                                                                                                                                    7.Mrs.K.KAVITHA https://in.docworkspace.com/d/sIAG4hYOQApj2urcG?sa=cl         \n                                                                                                                                                    \n 8.Ms.A.SHEERIN https://in.docworkspace.com/d/sIKC4hYOQAqT2urcG?sa=cl            \n                                                                                                                                                    9.Mr.U.MURUGANANTHAM ( Link is not available )                                                                                    \n                                                                                                                                                    They are the faculty of IOT in 2024-25. You can also check the faculty details by clicking the link next to their name."
     },
     {
         "id": "Library",
@@ -445,7 +359,7 @@ qa_data = [
             "mech professors",
             "mechanical engineering faculty"
         ],
-        "answer": "1.Dr.B.RADJARAM https://in.docworkspace.com/d/sIMm4hYOQAr6Eu7cG?sa=cl                                                <br>                                                                                                                                                    2.Mr.K.KARTHIGAYAN https://in.docworkspace.com/d/sINO4hYOQAtSEu7cG?sa=cl                                                                                                                                           <br>                                                                                                                                                    3.Mr.K.SELVAM https://in.docworkspace.com/d/sIKS4hYOQAuaEu7cG?sa=cl                                       <br>                                                                                                                                                    4.Mr.B.VASANTH https://in.docworkspace.com/d/sIHC4hYOQAviEu7cG?sa=cl                                                        <br>                                                                                                                                                    5.Mr.S.GANESHKUMAR https://in.docworkspace.com/d/sIHC4hYOQAo6Fu7cG?sa=cl                                                                                                                                                               <br>                                                                                                                                                    6.Mr.A.THIAGARAJAN https://in.docworkspace.com/d/sIEq4hYOQApyFu7cG?sa=cl                      <br>                                                                                                                                                    7.Mr.KARTHIKEYAN https://in.docworkspace.com/d/sIDy4hYOQArOFu7cG?sa=cl                         <br>                                                                                                                                                    8.Mr.J.SUGUMARAN https://in.docworkspace.com/d/sICW4hYOQAseFu7cG?sa=cl                          <br>                                                                                                                                                    9.Mr.R.RANJIT KUMAR https://in.docworkspace.com/d/sIM-4hYOQAtiFu7cG?sa=cl          <br>                                                                                                                                                  10.Ms.S.SUGUNYA https://in.docworkspace.com/d/sIHK4hYOQAu-Fu7cG?sa=cl                   <br>11.Mr.R.ILANDJEZIANR https://in.docworkspace.com/d/sIOy4hYOQAoKGu7cG?sa=cl                                                                                                                                  12.Dr.A.MATHIARASU https://in.docworkspace.com/d/sIGS4hYOQApmGu7cG?sa=cl                                                                                                                                    13.Dr.P.NATARAJAN https://in.docworkspace.com/d/sID-4hYOQAraGu7cG?sa=cl              <br>14.Mr.S.KRISHNA KUMAR https://in.docworkspace.com/d/sIHq4hYOQAtSGu7cG?sa=cl                                                                                                                                        15.Mrs.G.DEEBA https://in.docworkspace.com/d/sIAu4hYOQAvGGu7cG?sa=cl                       16.Mrs.S.SHEENA https://in.docworkspace.com/d/sIK24hYOQApaHu7cG?sa=cl              <br>They are the faculty of MECH in 2024-25. You can also check the faculty details by clicking the link next to their name."
+        "answer": "1.Dr.B.RADJARAM https://in.docworkspace.com/d/sIMm4hYOQAr6Eu7cG?sa=cl                                                \n                                                                                                                                                    2.Mr.K.KARTHIGAYAN https://in.docworkspace.com/d/sINO4hYOQAtSEu7cG?sa=cl                                                                                                                                           \n                                                                                                                                                    3.Mr.K.SELVAM https://in.docworkspace.com/d/sIKS4hYOQAuaEu7cG?sa=cl                                       \n                                                                                                                                                    4.Mr.B.VASANTH https://in.docworkspace.com/d/sIHC4hYOQAviEu7cG?sa=cl                                                        \n                                                                                                                                                    5.Mr.S.GANESHKUMAR https://in.docworkspace.com/d/sIHC4hYOQAo6Fu7cG?sa=cl                                                                                                                                                               \n                                                                                                                                                    6.Mr.A.THIAGARAJAN https://in.docworkspace.com/d/sIEq4hYOQApyFu7cG?sa=cl                      \n                                                                                                                                                    7.Mr.KARTHIKEYAN https://in.docworkspace.com/d/sIDy4hYOQArOFu7cG?sa=cl                         \n                                                                                                                                                    8.Mr.J.SUGUMARAN https://in.docworkspace.com/d/sICW4hYOQAseFu7cG?sa=cl                          \n                                                                                                                                                    9.Mr.R.RANJIT KUMAR https://in.docworkspace.com/d/sIM-4hYOQAtiFu7cG?sa=cl          \n                                                                                                                                                  10.Ms.S.SUGUNYA https://in.docworkspace.com/d/sIHK4hYOQAu-Fu7cG?sa=cl                   \n11.Mr.R.ILANDJEZIANR https://in.docworkspace.com/d/sIOy4hYOQAoKGu7cG?sa=cl                                                                                                                                  12.Dr.A.MATHIARASU https://in.docworkspace.com/d/sIGS4hYOQApmGu7cG?sa=cl                                                                                                                                    13.Dr.P.NATARAJAN https://in.docworkspace.com/d/sID-4hYOQAraGu7cG?sa=cl              \n14.Mr.S.KRISHNA KUMAR https://in.docworkspace.com/d/sIHq4hYOQAtSGu7cG?sa=cl                                                                                                                                        15.Mrs.G.DEEBA https://in.docworkspace.com/d/sIAu4hYOQAvGGu7cG?sa=cl                       16.Mrs.S.SHEENA https://in.docworkspace.com/d/sIK24hYOQApaHu7cG?sa=cl              \nThey are the faculty of MECH in 2024-25. You can also check the faculty details by clicking the link next to their name."
     },
     {
         "id": "placement",
@@ -486,7 +400,7 @@ qa_data = [
             "robotics and automation faculty",
             "robotics and automation staff"
         ],
-        "answer": "1.Dr.V.GOVINDHAN https://in.docworkspace.com/d/sIDe4hYOQAs2JsbcG?sa=cl     <br>                                                                                                                                                    2.Mr.A.BASKARAN https://in.docworkspace.com/d/sID-4hYOQApiKsbcG?sa=cl          <br>                                                                                                                                                    3.Mrs.KIRUBA SANDOU https://in.docworkspace.com/d/sING4hYOQAquKsbcG?sa=cl                                                                                                                                                               <br>                                                                                                                                                    4.Ms.D.JASMINE SUSILA https://in.docworkspace.com/d/sIDq4hYOQAuqKsbcG?sa=cl                                                                                                                                                <br>                                                                                                                                                    5.Mrs.J.V. PESHA https://in.docworkspace.com/d/sIJu4hYOQAvmKsbcG?sa=cl                        <br>                                                                                                                                                    6.Mrs.D.DHARANI https://in.docworkspace.com/d/sIPm4hYOQAoOLsbcG?sa=cl         <br>                                                                                                                                                    7.Mrs.T.SUDHA ( link is not  available )                                                                                 <br>                                                                                                                                                     They are the faculty of robotics and automation in 2024-25. You can also check the faculty details by clicking the link next to their name."
+        "answer": "1.Dr.V.GOVINDHAN https://in.docworkspace.com/d/sIDe4hYOQAs2JsbcG?sa=cl     \n                                                                                                                                                    2.Mr.A.BASKARAN https://in.docworkspace.com/d/sID-4hYOQApiKsbcG?sa=cl          \n                                                                                                                                                    3.Mrs.KIRUBA SANDOU https://in.docworkspace.com/d/sING4hYOQAquKsbcG?sa=cl                                                                                                                                                               \n                                                                                                                                                    4.Ms.D.JASMINE SUSILA https://in.docworkspace.com/d/sIDq4hYOQAuqKsbcG?sa=cl                                                                                                                                                \n                                                                                                                                                    5.Mrs.J.V. PESHA https://in.docworkspace.com/d/sIJu4hYOQAvmKsbcG?sa=cl                        \n                                                                                                                                                    6.Mrs.D.DHARANI https://in.docworkspace.com/d/sIPm4hYOQAoOLsbcG?sa=cl         \n                                                                                                                                                    7.Mrs.T.SUDHA ( link is not  available )                                                                                 \n                                                                                                                                                     They are the faculty of robotics and automation in 2024-25. You can also check the faculty details by clicking the link next to their name."
     },
     {
         "id": "room_num",
@@ -716,47 +630,52 @@ qa_data = [
     
 ]
 
+# -------------------- PREPROCESS --------------------
+question_to_answer = {}
+all_questions = []
 
+for entry in qa_data:
+    for q in entry["questions"]:
+        ql = q.lower().strip()
+        question_to_answer[ql] = entry["answer"]
+        all_questions.append(ql)
 
-# -------------------- FIND BEST MATCH --------------------
+spell = SpellChecker()
+
 def find_best_match(user_input):
-    all_questions = []
-    for item in qa_data:
-        all_questions.extend(item["questions"])
-
-    match = difflib.get_close_matches(user_input.lower(), all_questions, n=1, cutoff=0.5)
-
+    ui = (user_input or "").lower().strip()
+    if not ui:
+        return "Please type a question."
+    if ui in question_to_answer:
+        return question_to_answer[ui]
+    match = difflib.get_close_matches(ui, all_questions, n=1, cutoff=0.70)
     if match:
-        for item in qa_data:
-            if match[0] in item["questions"]:
-                return item
-    return None
-
+        return question_to_answer[match[0]]
+    return "Answer not available."
 
 # -------------------- ROUTES --------------------
-@app.route("/")
-def home():
-    return render_template("index.html")
 
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-@app.route("/get", methods=["POST"])
-def chatbot_response():
-    data = request.get_json()
-    user_input = data.get("msg", "")
+@app.route('/get', methods=['POST'])
+def get_bot_response():
+    data = request.get_json(force=True) or {}
+    user_message = data.get('msg', '')
 
-    result = find_best_match(user_input)
+    words = user_message.lower().split()
+    corrected_words = [spell.correction(word) for word in words]
+    corrected_text = " ".join(corrected_words)
 
-    if result:
-        return jsonify({
-            "reply": result.get("answer", ""),
-            "images": result.get("images", [])
-        })
+    reply = find_best_match(corrected_text)
+
+    # If reply is an image path, return image in response
+    
+    if reply.startswith("/static/"):
+        return jsonify({"reply": "Here is the picture you asked for:", "image": reply})
     else:
-        return jsonify({
-            "reply": "Sorry, I don't have information about that.",
-            "images": []
-        })
+        return jsonify({"reply": reply, "image": None})
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)
