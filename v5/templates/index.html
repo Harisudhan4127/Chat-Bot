@@ -1,296 +1,161 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <title>MVIT Chat Bot</title>
     <style>
-      body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-        background-size: 300% 300%;
-        animation: gradientBG 10s ease infinite;
-        color: white;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-      }
-
-      @keyframes gradientBG {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
-
-      .chat-header {
-        background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
-        padding: 15px;
-        text-align: center;
-        font-size: 22px;
-        font-weight: bold;
-        border-bottom: 2px solid #00ffcc;
-        border-radius: 0 0 20px 20px;
-        width: 30%;
-        align-self: center;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-        color: #fff;
-      }
-
-      .chat-container {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        padding: 15px;
-        overflow-y: auto;
-      }
-
-      .message-wrapper {
-        display: flex;
-        align-items: flex-start;
-        margin: 8px 0;
-        max-width: 70%;
-        animation: fadeIn 0.4s ease;
-      }
-
-      @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-
-      .bot-avatar {
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        margin-right: 8px;
-        flex-shrink: 0;
-      }
-
-      .message {
-        padding: 12px;
-        border-radius: 15px;
-        word-wrap: break-word;
-        box-shadow: 0 3px 6px rgba(0,0,0,0.3);
-      }
-      .user-message {
-        background: linear-gradient(135deg, #00c6ff, #0072ff);
-        align-self: flex-end;
-        color: white;
-        margin-left: auto;
-      }
-      .bot-message {
-        background: linear-gradient(135deg, #434343, #000000);
-        color: #eee;
-      }
-
-      .chat-image {
-        max-width: 140px;
-        max-height: 140px;
-        border-radius: 10px;
-        cursor: pointer;
-        margin: 5px 5px 0 0;
-        transition: transform 0.3s;
-      }
-      .chat-image:hover {
-        transform: scale(1.05);
-        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      }
-
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0, 0, 0, 0.9);
-      }
-      .modal-content {
-        margin: auto;
-        display: block;
-        max-width: 80%;
-        max-height: 80%;
-        border-radius: 10px;
-        margin-top: 50px;
-      }
-      .close {
-        position: absolute;
-        top: 20px;
-        right: 35px;
-        color: white;
-        font-size: 40px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-      .close:hover {
-        color: #bbb;
-      }
-
-      .input-container {
-        display: flex;
-        border-top: 2px solid #00ffcc;
-        padding: 10px;
-        background-color: rgba(0,0,0,0.7);
-      }
-      #user-input {
-        flex: 1;
-        padding: 12px;
-        border: none;
-        border-radius: 12px;
-        outline: none;
-        font-size: 15px;
-      }
-      #send-btn {
-        padding: 12px 18px;
-        margin-left: 8px;
-        background: linear-gradient(135deg, #00ffcc, #00cc88);
-        border: none;
-        border-radius: 12px;
-        cursor: pointer;
-        color: black;
-        font-weight: bold;
-        transition: 0.3s;
-      }
-      #send-btn:hover {
-        background: linear-gradient(135deg, #00cca3, #009966);
-        transform: scale(1.05);
-      }
-
-      .typing {
-        font-size: 13px;
-        color: #ccc;
-        font-style: italic;
-        margin: 5px 45px;
-        animation: blink 1.5s infinite;
-      }
-      @keyframes blink {
-        50% { opacity: 0.5; }
-      }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #chatbox {
+            width: 70%;
+            height: 70%;
+            background: #222;
+            border-radius: 10px;
+            padding: 15px;
+            overflow-y: auto;
+            color: white;
+        }
+        .userText {
+            text-align: right;
+            margin: 10px;
+        }
+        .userText span {
+            background: #0084ff;
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .botText {
+            text-align: left;
+            margin: 10px;
+        }
+        .botText span {
+            background: #444;
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .botImageWrapper {
+            margin: 10px 0;
+            text-align: left;
+        }
+        .botImage {
+            max-width: 250px;
+            border-radius: 10px;
+            display: block;
+        }
+        .botCaption {
+            font-size: 0.9em;
+            color: #ddd;
+            margin-top: 4px;
+            text-align: center;
+        }
+        #userInput {
+            margin-top: 10px;
+            width: 70%;
+            display: flex;
+        }
+        #textInput {
+            flex: 1;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        #buttonInput {
+            padding: 10px;
+            background: #00c853;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
     </style>
-  </head>
-  <body>
-    <div class="chat-header">🤖 MVIT Chat Bot</div>
-    <div class="chat-container" id="chat-container"></div>
+</head>
+<body>
+    <h2>🤖 MVIT Chat Bot</h2>
+    <div id="chatbox"></div>
 
-    <div class="input-container">
-      <input type="text" id="user-input" placeholder="Type your message..." />
-      <button id="send-btn">Send</button>
-    </div>
-
-    <div id="imgModal" class="modal">
-      <span class="close" id="closeModal">&times;</span>
-      <img class="modal-content" id="imgInModal" />
+    <div id="userInput">
+        <input id="textInput" type="text" placeholder="Type your message...">
+        <button id="buttonInput">Send</button>
     </div>
 
     <script>
-      const sendBtn = document.getElementById("send-btn");
-      const userInput = document.getElementById("user-input");
-      const chatContainer = document.getElementById("chat-container");
+        function appendMessage(message, className) {
+            let chatBox = document.getElementById("chatbox");
+            let messageElement = document.createElement("p");
+            messageElement.classList.add(className);
+            messageElement.innerHTML = "<span>" + message + "</span>";
+            chatBox.appendChild(messageElement);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
 
-      const modal = document.getElementById("imgModal");
-      const modalImg = document.getElementById("imgInModal");
-      const closeModal = document.getElementById("closeModal");
+        function appendBotMessage(data) {
+            let chatBox = document.getElementById("chatbox");
 
-      closeModal.onclick = () => { modal.style.display = "none"; };
-      modal.onclick = (e) => { if(e.target === modal) modal.style.display = "none"; };
+            if (data.reply && data.reply.trim() !== "") {
+                appendMessage(data.reply, "botText");
+            }
 
-      function addMessage(text, isUser) {
-        if (isUser) {
-          const msg = document.createElement("div");
-          msg.classList.add("message", "user-message");
-          msg.textContent = text;
-          chatContainer.appendChild(msg);
-        } else {
-          const wrapper = document.createElement("div");
-          wrapper.classList.add("message-wrapper");
-          wrapper.style.alignSelf = "flex-start";
+            if (data.images && data.images.length > 0) {
+                data.images.forEach(imgObj => {
+                    let imgWrapper = document.createElement("div");
+                    imgWrapper.classList.add("botImageWrapper");
 
-          const avatar = document.createElement("img");
-          avatar.src = "https://cdn-icons-png.flaticon.com/512/4712/4712109.png";
-          avatar.classList.add("bot-avatar");
+                    let img = document.createElement("img");
+                    img.src = imgObj.src;
+                    img.alt = imgObj.caption || "Image";
+                    img.classList.add("botImage");
 
-          const msg = document.createElement("div");
-          msg.classList.add("message", "bot-message");
+                    imgWrapper.appendChild(img);
 
-          if (text.startsWith("img:")) {
-            const parts = text.replace("img:", "").trim().split("|");
-            const images = parts[0].split(",");
-            const description = parts[1] ? parts[1].trim() : "";
+                    if (imgObj.caption) {
+                        let caption = document.createElement("div");
+                        caption.classList.add("botCaption");
+                        caption.innerText = imgObj.caption;
+                        imgWrapper.appendChild(caption);
+                    }
 
-            const imgContainer = document.createElement("div");
-            imgContainer.style.display = "flex";
-            imgContainer.style.flexWrap = "wrap";
-            imgContainer.style.gap = "10px";
+                    chatBox.appendChild(imgWrapper);
+                });
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        }
 
-            images.forEach(url => {
-              const img = document.createElement("img");
-              img.src = url.trim();
-              img.classList.add("chat-image");
-              img.onclick = () => { modal.style.display = "block"; modalImg.src = img.src; };
-              imgContainer.appendChild(img);
+        document.getElementById("buttonInput").onclick = function() {
+            let textInput = document.getElementById("textInput");
+            let userText = textInput.value;
+            if (userText.trim() === "") return;
+
+            appendMessage(userText, "userText");
+
+            fetch("/get", {
+                method: "POST",
+                body: JSON.stringify({msg: userText}),
+                headers: {"Content-Type": "application/json"}
+            })
+            .then(response => response.json())
+            .then(data => {
+                appendBotMessage(data);
             });
 
-            msg.appendChild(imgContainer);
-            if (description) {
-              const desc = document.createElement("p");
-              desc.style.marginTop = "8px";
-              desc.style.fontSize = "14px";
-              desc.style.color = "#ddd";
-              desc.textContent = description;
-              msg.appendChild(desc);
+            textInput.value = "";
+        };
+
+        document.getElementById("textInput").addEventListener("keypress", function(e) {
+            if (e.key === "Enter") {
+                document.getElementById("buttonInput").click();
             }
-          } else {
-            msg.textContent = text;
-          }
-
-          wrapper.appendChild(avatar);
-          wrapper.appendChild(msg);
-          chatContainer.appendChild(wrapper);
-        }
-        chatContainer.scrollTop = chatContainer.scrollHeight;
-      }
-
-      function showTyping() {
-        const typing = document.createElement("div");
-        typing.classList.add("typing");
-        typing.textContent = "Bot is typing...";
-        typing.id = "typing";
-        chatContainer.appendChild(typing);
-        chatContainer.scrollTop = chatContainer.scrollHeight;
-      }
-
-      function removeTyping() {
-        const typing = document.getElementById("typing");
-        if (typing) typing.remove();
-      }
-
-      function sendMessage() {
-        const text = userInput.value.trim();
-        if (!text) return;
-        addMessage(text, true);
-        userInput.value = "";
-        showTyping();
-
-        fetch("/get", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ msg: text }),
-        })
-          .then(res => res.json())
-          .then(data => {
-            removeTyping();
-            addMessage(data.reply, false);
-          })
-          .catch(() => {
-            removeTyping();
-            addMessage("⚠️ Sorry, I couldn't connect to the server.", false);
-          });
-      }
-
-      sendBtn.addEventListener("click", sendMessage);
-      userInput.addEventListener("keypress", e => { if (e.key === "Enter") sendMessage(); });
+        });
     </script>
-  </body>
+</body>
 </html>
